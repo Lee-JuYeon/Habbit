@@ -14,6 +14,7 @@ struct NotificationView: View {
     var body: some View {
         FoldableListView(
             setTitle: "📣 공지사항",
+            setTitleSize: 30,
             setHeight: 200,
             setContent: {
                 ForEach(notificationList, id: \.self){ model in

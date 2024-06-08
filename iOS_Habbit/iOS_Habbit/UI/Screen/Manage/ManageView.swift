@@ -19,9 +19,33 @@ struct ManageView : View {
                 Axis.Set.vertical
             ){
                 VStack(alignment : HorizontalAlignment.leading){
-                    mView(setGeo: geo, setTitle: "내가 개설한 갓생", setList: AcademyModel.dummyList)
-                    mView(setGeo: geo, setTitle: "내가 가입한 갓생", setList: AcademyModel.dummyList)
-                    mView(setGeo: geo, setTitle: "관심있는 갓생", setList: AcademyModel.dummyList)
+                    FoldableListView(
+                        setTitle: "내가 개설한 갓생",
+                        setTitleSize: 25, 
+                        setHeight: 400
+                    ) {
+                        ForEach(AcademyModel.dummyList, id: \.self){ model in
+                            AcademyCell(setModel: model)
+                        }
+                    }
+                    FoldableListView(
+                        setTitle: "내가 가입한 갓생",
+                        setTitleSize: 25,
+                        setHeight: 400
+                    ) {
+                        ForEach(AcademyModel.dummyList, id: \.self){ model in
+                            AcademyCell(setModel: model)
+                        }
+                    }
+                    FoldableListView(
+                        setTitle: "관심있는 갓생",
+                        setTitleSize: 25,
+                        setHeight: 400
+                    ) {
+                        ForEach(AcademyModel.dummyList, id: \.self){ model in
+                            AcademyCell(setModel: model)
+                        }
+                    }
                 }
             }
         }
@@ -36,57 +60,6 @@ struct ManageView : View {
     }
     
    
-    private func mView(setGeo : GeometryProxy, setTitle : String, setList : [AcademyModel]) -> some View {
-        let width = setGeo.size.width
-        let height = setGeo.size.height
-        
-        @State var arrow = "🔽"
-        
-        return VStack{
-            HStack(
-                alignment : VerticalAlignment.center
-            ){
-                Text(setTitle)
-                    .font(.system(size: 30))
-                    .fontWeight(.bold)
-                    .padding()
-                
-                Text(arrow)
-            }
-            .onTapGesture {
-//                if arrow == "🔽"{
-//                    arrow = "🔼"
-//                }else{
-//                    arrow = "🔽"
-//                }
-            }
-            .frame(
-                width: width,
-                height: height/10 * 1,
-                alignment: .leading
-            )
-            
-//            if arrow == "🔼" {
-                RecyclerView(
-                    setAxis: .VERTICAL
-                ) {
-                    ForEach(setList, id: \.self) { model in
-                        AcademyCell(setModel: model)
-                    }
-                }
-                .frame(
-                    width: width,
-                    height: height/10 * 4,
-                    alignment: .leading
-                )
-//            }
-        }
-        .frame(
-            width: width,
-            height: height/10 * 5,
-            alignment: .leading
-        )
-    }
 }
 
 

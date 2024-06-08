@@ -32,16 +32,4 @@ struct SettingsView : View {
             alignment: .center
         )
     }
-    
-    
-    
-    
-   
-    
-  
-}
-
-
-#Preview{
-    SettingsView()
 }

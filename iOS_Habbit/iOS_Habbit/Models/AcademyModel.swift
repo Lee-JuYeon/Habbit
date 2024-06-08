@@ -42,7 +42,8 @@ extension AcademyModel {
                         userImage: "user_image_1",
                         peerReview: ["Great person to work with!"],
                         socialMedia: ["instagram": "alice_insta", "youtube": "alice_yt"],
-                        bio: "Passionate about technology and education."
+                        bio: "Passionate about technology and education.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "매우 재미있고 유익한 모임이었습니다. 선생님도 친절하고, 다른 참가자들과도 좋은 시간을 보냈습니다.",
                     image: "user_image_1"
@@ -72,7 +73,8 @@ extension AcademyModel {
                         userImage: "user_image_2",
                         peerReview: ["Very punctual and reliable."],
                         socialMedia: ["instagram": "bob_insta"],
-                        bio: "Love swimming and outdoor activities."
+                        bio: "Love swimming and outdoor activities.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "정말 효과적으로 수영 실력을 향상시킬 수 있었습니다. 코치님의 지도도 훌륭하고, 다른 참가자들과 함께 즐겁게 운동했습니다.",
                     image: "user_image_2"
@@ -102,7 +104,8 @@ extension AcademyModel {
                         userImage: "user_image_3",
                         peerReview: ["Excellent communication skills."],
                         socialMedia: ["youtube": "charlie_yt"],
-                        bio: "Enjoys learning new languages and cultures."
+                        bio: "Enjoys learning new languages and cultures.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "영어 회화 실력이 정말 많이 향상되었습니다. 강사님도 친절하고, 다른 참가자들과 함께 즐겁게 공부했습니다.",
                     image: "user_image_3"
@@ -132,7 +135,8 @@ extension AcademyModel {
                         userImage: "user_image_1",
                         peerReview: ["Great person to work with!"],
                         socialMedia: ["instagram": "alice_insta", "youtube": "alice_yt"],
-                        bio: "Passionate about technology and education."
+                        bio: "Passionate about technology and education.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "다양한 요리를 배우고, 직접 만들어 먹는 재미가 정말 좋았습니다. 선생님의 설명도 명확하고, 다른 참가자들과 함께 맛있는 식사를 했습니다.",
                     image: "user_image_4"
@@ -162,7 +166,8 @@ extension AcademyModel {
                         userImage: "user_image_2",
                         peerReview: ["Very punctual and reliable."],
                         socialMedia: ["instagram": "bob_insta"],
-                        bio: "Love swimming and outdoor activities."
+                        bio: "Love swimming and outdoor activities.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "기초부터 체계적으로 배울 수 있어서 좋았습니다. 강사님도 친절하시고, 촬영 실력이 많이 늘었습니다.",
                     image: "user_image_5"
@@ -192,7 +197,8 @@ extension AcademyModel {
                         userImage: "user_image_3",
                         peerReview: ["Excellent communication skills."],
                         socialMedia: ["youtube": "charlie_yt"],
-                        bio: "Enjoys learning new languages and cultures."
+                        bio: "Enjoys learning new languages and cultures.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "개인 맞춤형 레슨이 정말 좋았습니다. 피아노 실력이 많이 향상되었고, 강사님도 매우 친절하십니다.",
                     image: "user_image_6"
@@ -222,7 +228,8 @@ extension AcademyModel {
                         userImage: "user_image_3",
                         peerReview: ["Excellent communication skills."],
                         socialMedia: ["youtube": "charlie_yt"],
-                        bio: "Enjoys learning new languages and cultures."
+                        bio: "Enjoys learning new languages and cultures.",
+                        careers: CareerModel.dummyList
                     ),
                     reviews: "개인 맞춤형 레슨이 정말 좋았습니다. 피아노 실력이 많이 향상되었고, 강사님도 매우 친절하십니다.",
                     image: "user_image_6"

@@ -18,7 +18,7 @@ struct AuthView: View {
     var body: some View {
         LazyVStack(alignment:HorizontalAlignment.leading){
             if auth == true && editProfile == false {// 계정이 있는경우, 프로필 뷰
-                ProfileView(setUserModel: UserModel.jiwonModel)
+                ProfileView(setUserModel: UserModel.saeKyeongModel)
             }else if auth == true && editProfile == true{ // 프로필 수정뷰
                 ProfileEditView(setUserModel: UserModel.jiwonModel)
             }else if auth == false && requireRegister == false{ // 계정이 없는 경우, 계정 생성이 필요 없는 경우 -> 로그인 뷰

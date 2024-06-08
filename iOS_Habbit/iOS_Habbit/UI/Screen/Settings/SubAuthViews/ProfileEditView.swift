@@ -11,21 +11,22 @@ struct ProfileEditView: View {
     let setUserModel : UserModel
     var body: some View {
         VStack(alignment : HorizontalAlignment.leading){
-            ZStack(alignment: .topLeading){
+            VStack(
+                alignment : HorizontalAlignment.leading
+            ){
                 HStack(
                     alignment : VerticalAlignment.top
                 ){
+                    SelfieView(
+                        setImage: setUserModel.userImage,
+                        setVerify: setUserModel.selfieVerify,
+                        setSize: 150
+                    )
+                    
                     VStack(
                         alignment : HorizontalAlignment.leading,
-                        spacing: 10
+                        spacing: 0
                     ){
-                        
-                        SelfieView(
-                            setImage: setUserModel.userImage,
-                            setVerify: setUserModel.selfieVerify,
-                            setSize: 150
-                        )
-                        
                         HStack(
                             alignment : VerticalAlignment.center,
                             spacing: 10
@@ -43,24 +44,73 @@ struct ProfileEditView: View {
                                 setSocialType: .YOUTUBE
                             )
                         }
+                        
+                        Text("👣 경력")
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                            .frame(
+                                maxWidth: .infinity,
+                                alignment: Alignment.leading
+                            )
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                        ScrollView(.vertical, showsIndicators: false) {
+                            ForEach(CareerModel.dummyList, id: \.self){ model in
+                                LazyVStack(
+                                    alignment : HorizontalAlignment.leading
+                                ){
+                                    Text(model.titie)
+                                        .font(.system(size: 18))
+                                        .lineLimit(1)
+                                    Text(model.career)
+                                        .font(.system(size: 15))
+                                        .lineLimit(1)
+                                }
+                                .padding(5)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.black, lineWidth: 1)
+                                )
+                            }
+                        }
                     }
-                    
-                    // 자기소개
-                    Text(setUserModel.bio ?? "")
-                        .font(.system(size: 15))
-                        .padding(10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.black, lineWidth: 1)
-                        )
-                        .multilineTextAlignment(.leading)
-                    
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity,
+                        minHeight: 0,
+                        idealHeight: 150,
+                        maxHeight: .infinity
+                    )
                 }
                 
-              
+                // 자기소개
+                Text(setUserModel.bio ?? "")
+                    .font(.system(size: 15))
+                    .multilineTextAlignment(.leading)
+
+                Text("저장하기")
+                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
+                    .font(.system(size: 18))
+                    .fontWeight(.bold)
+                    .frame(
+                        maxWidth: .infinity,
+                        alignment: Alignment.center
+                    )
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    .padding(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
+                    .onTapGesture {
+                        // 저장
+                    }
+                
             }
+            .padding(10)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.black, lineWidth: 1)
+            )
         }
     }
-  
 }
 
