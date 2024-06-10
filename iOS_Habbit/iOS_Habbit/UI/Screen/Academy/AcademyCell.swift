@@ -19,6 +19,17 @@ struct AcademyCell : View {
     private let dummyImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiVMXkVnFDabJrNMhQ4A5xZvVqXh3Nv2gYWg&s"
     @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
 
+    
+    private func monthlyPayConverter(pay : Double?) -> String {
+        return switch(pay){
+        case 0.0 :
+            "무료"
+        case nil :
+            "무료"
+        default :
+            String(format: "%.0f", pay ?? "무료") + "원"
+        }
+    }
 
     var body : some View {
         HStack(
@@ -36,13 +47,18 @@ struct AcademyCell : View {
                 ProgressView()
                     .frame(width: 150, height: 150)
             }
+            
             LazyVStack(alignment : HorizontalAlignment.leading){
-                Text("취미 타이틀")
-                Text("학원 이름")
-                Text("📍 학원 위치")
-                Text("💵 월 이용 가격")
+                Text(getModel?.title ?? "")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Text("📍 \(String(describing: getModel?.location ?? ""))")
+                    .font(.title3)
+
+                Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
             }
         }
+       
         .onTapGesture {
             withAnimation {
                 bottomSheetVM.academyModel = getModel
@@ -67,5 +83,8 @@ struct AcademyCell : View {
                 Label("신고", systemImage: "square.and.arrow.down")
             }
         }
+        .padding(
+            EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
+        )
     }
 }

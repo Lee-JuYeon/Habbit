@@ -42,7 +42,7 @@ extension AcademyModel {
         AcademyModel(
             academyUID: "academy-1",
             hostUID: "host-1",
-            image: "academy_image_1",
+            image: "https://newsimg.sedaily.com/2023/11/08/29X5NVRFTF_1.jpg",
             title: "Python 프로그래밍 입문",
             location: "서울 강남구",
             monthlyPay: 250000,
@@ -164,7 +164,7 @@ extension AcademyModel {
         AcademyModel(
             academyUID: "academy-2",
             hostUID: "host-2",
-            image: "academy_image_2",
+            image: "https://pds.skyedaily.com/news_data2019/20201214123511_fbycyzdb.jpg",
             title: "수영 실력 향상",
             location: "인천 연수구",
             monthlyPay: 150000,
@@ -285,7 +285,7 @@ extension AcademyModel {
         AcademyModel(
             academyUID: "academy-3",
             hostUID: "host-3",
-            image: "academy_image_3",
+            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
             title: "영어 회화 실력 향상",
             location: "대구 중구",
             monthlyPay: 200000,
