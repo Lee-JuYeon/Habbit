@@ -33,7 +33,7 @@ struct CustomTabBottom: View {
             spacing: 0
         ){
             Rectangle()
-                .fill(Color.yellow)
+                .fill(Color.black)
                 .frame(
                     minWidth: 0,
                     maxWidth: .infinity,

@@ -24,14 +24,16 @@ import SwiftUI
 }
  */
 
+
 struct CustomTabView<Content: View>: View {
     
     private var getTabItemModels: [CustomTabItemModel]
+    private var getTabViewType: CustomTabViewType
     @Binding var getSelectedIndex: Int
-    @ViewBuilder let getContent: (Int) -> Content
-    @Environment(\.colorScheme) private var scheme
+    private let getContent: (Int) -> Content
 
     init(
+        setTabViewType: CustomTabViewType,
         setTabItemModels: [CustomTabItemModel],
         setSelectedIndex: Binding<Int>,
         @ViewBuilder setContent: @escaping (Int) -> Content
@@ -39,36 +41,47 @@ struct CustomTabView<Content: View>: View {
         self.getTabItemModels = setTabItemModels
         self._getSelectedIndex = setSelectedIndex
         self.getContent = setContent
+        self.getTabViewType = setTabViewType
     }
     
+    @Environment(\.colorScheme) private var scheme
    
     var body: some View {
         VStack(
             alignment : HorizontalAlignment.center,
             spacing: 0
         ) {
-            TabView(
-                selection: $getSelectedIndex
-            ) {
-                ForEach(getTabItemModels.indices, id: \.self) { index in
-                    getContent(index)
-                        .tag(index)
-                }
-            }
-            .background(Color.clear)
-            
-            CustomTabBottom(
-                setTabItemModels: getTabItemModels,
-                setTabItemImageSize: 25,
-                setItemCliekd: { clickedItemTitle in
-                    if let index = CustomTabItemModel.CustomTabItemModelList.firstIndex(
-                        where: { $0.title == clickedItemTitle }) {
+            switch(getTabViewType){
+            case .BottomNavigation :
+                getContent(getSelectedIndex)
+                CustomTabBottom(
+                    setTabItemModels: getTabItemModels,
+                    setTabItemImageSize: 25,
+                    setItemCliekd: { clickedItemTitle in
+                        if let index = getTabItemModels.firstIndex(
+                            where: { $0.title == clickedItemTitle }) {
                             getSelectedIndex = index
                         } else {
                             getSelectedIndex = 0
+                        }
                     }
-                }
-            )
+                )
+            case .TabView :
+                CustomTabBottom(
+                    setTabItemModels: getTabItemModels,
+                    setTabItemImageSize: 25,
+                    setItemCliekd: { clickedItemTitle in
+                        if let index = getTabItemModels.firstIndex(
+                            where: { $0.title == clickedItemTitle }) {
+                            getSelectedIndex = index
+                        } else {
+                            getSelectedIndex = 0
+                        }
+                    }
+                )
+                
+                getContent(getSelectedIndex)
+            }
         }
     }
 }

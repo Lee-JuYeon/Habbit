@@ -12,11 +12,5 @@ struct CustomTabItemModel : Hashable{
     let title: String
 }
 
-extension CustomTabItemModel {
-    static var CustomTabItemModelList = [
-        CustomTabItemModel(image: "icon_people", title: "Academy"),
-        CustomTabItemModel(image: "icon_chat", title: "Chat"),
-        CustomTabItemModel(image: "icon_profile", title: "Profile")
-    ]
-}
+
 

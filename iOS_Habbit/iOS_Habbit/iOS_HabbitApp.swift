@@ -13,7 +13,7 @@ struct iOS_HabbitApp: App {
     @StateObject private var bottomSheetVM = CustomBottomSheetVM()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environmentObject(bottomSheetVM)
         }
     }

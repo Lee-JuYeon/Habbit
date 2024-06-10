@@ -96,6 +96,7 @@ struct DropDownView: View {
             ForEach(getList, id: \.self) { option in
                 HStack {
                     Text(option)
+                    
                     Spacer()
                     Image(systemName: "checkmark")
                         .opacity(getTitle == option ? 1 : 0)
