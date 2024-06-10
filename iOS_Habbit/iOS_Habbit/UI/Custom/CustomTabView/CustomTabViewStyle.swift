@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum CustomTabViewType {
+enum CustomTabViewStyle {
     case BottomNavigation
     case TabView
 }

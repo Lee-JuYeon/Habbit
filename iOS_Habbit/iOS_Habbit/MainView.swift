@@ -15,7 +15,8 @@ struct MainView: View {
     var body: some View {
         ZStack{
             CustomTabView(
-                setTabViewType: .BottomNavigation,
+                setTabViewStyle: .BottomNavigation,
+                setTabBackgroundColour: .backgroundColour,
                 setTabItemModels: [
                     CustomTabItemModel(image: "image_up", title: "갓생"),
                     CustomTabItemModel(image: "image_cards", title: "관리"),
@@ -32,26 +33,7 @@ struct MainView: View {
                     default :
                         AcademyView()
                     }
-                    
                 }
-
-//            TabView {
-//                AcademyView()
-//                    .tabItem {
-//                        Label("갓생", image: "image_up")
-//                    }
-//
-//                ManageView()
-//                    .tabItem {
-//                        Label("갓생관리", image: "image_cards")
-//                    }
-//
-//                SettingsView()
-//                    .tabItem {
-//                        Label("설정", image: "image_profile")
-//                    }
-//
-//            }
             
             CustomBottomSheet(isOpen: $bottomSheetVM.sheetVisible) {
                 switch(bottomSheetVM.sheetType){

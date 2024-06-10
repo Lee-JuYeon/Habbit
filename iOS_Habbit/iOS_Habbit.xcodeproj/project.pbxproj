@@ -33,7 +33,7 @@
 		7E34B9742C157BC30030D589 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9732C157BC30030D589 /* ReviewListView.swift */; };
 		7E34B9782C15FE910030D589 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9772C15FE910030D589 /* ActivityListView.swift */; };
 		7E34B97C2C16359D0030D589 /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97B2C16359D0030D589 /* HostView.swift */; };
-		7E34B97E2C1721B40030D589 /* CustomTabViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97D2C1721B40030D589 /* CustomTabViewType.swift */; };
+		7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -103,7 +103,7 @@
 		7E34B9732C157BC30030D589 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		7E34B9772C15FE910030D589 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
 		7E34B97B2C16359D0030D589 /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
-		7E34B97D2C1721B40030D589 /* CustomTabViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewType.swift; sourceTree = "<group>"; };
+		7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewStyle.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -436,7 +436,7 @@
 				7E5F2B902C09B0F50035535B /* CustomTabItemModel.swift */,
 				7E5F2B922C09B1290035535B /* CustomTabBottom.swift */,
 				7E5F2B962C09C2340035535B /* CustomTabBottomItem.swift */,
-				7E34B97D2C1721B40030D589 /* CustomTabViewType.swift */,
+				7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */,
 			);
 			path = CustomTabView;
 			sourceTree = "<group>";
@@ -666,7 +666,7 @@
 				7E34B9742C157BC30030D589 /* ReviewListView.swift in Sources */,
 				7E34B9782C15FE910030D589 /* ActivityListView.swift in Sources */,
 				7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */,
-				7E34B97E2C1721B40030D589 /* CustomTabViewType.swift in Sources */,
+				7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */,
 				7E34B9692C13320E0030D589 /* ProfileEditView.swift in Sources */,
 				7E5F2BAA2C0C3AAA0035535B /* AcademyHeader.swift in Sources */,
 				7E34B97C2C16359D0030D589 /* HostView.swift in Sources */,

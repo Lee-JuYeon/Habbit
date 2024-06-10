@@ -56,6 +56,7 @@ struct CustomTabBottomItem: View {
                 ))
             
         }
+        .background(.clear)
         .frame(
             height:getParentHeight
         )

@@ -28,20 +28,23 @@ import SwiftUI
 struct CustomTabView<Content: View>: View {
     
     private var getTabItemModels: [CustomTabItemModel]
-    private var getTabViewType: CustomTabViewType
+    private var getTabViewStyle: CustomTabViewStyle
+    private var getTabBackgroundColour : Color
     @Binding var getSelectedIndex: Int
     private let getContent: (Int) -> Content
 
     init(
-        setTabViewType: CustomTabViewType,
+        setTabViewStyle: CustomTabViewStyle,
+        setTabBackgroundColour : Color,
         setTabItemModels: [CustomTabItemModel],
         setSelectedIndex: Binding<Int>,
         @ViewBuilder setContent: @escaping (Int) -> Content
     ) {
         self.getTabItemModels = setTabItemModels
+        self.getTabBackgroundColour = setTabBackgroundColour
         self._getSelectedIndex = setSelectedIndex
         self.getContent = setContent
-        self.getTabViewType = setTabViewType
+        self.getTabViewStyle = setTabViewStyle
     }
     
     @Environment(\.colorScheme) private var scheme
@@ -54,15 +57,17 @@ struct CustomTabView<Content: View>: View {
                 alignment : HorizontalAlignment.center,
                 spacing: 0
             ) {
-                switch(getTabViewType){
+                switch(getTabViewStyle){
                 case .BottomNavigation :
                     getContent(getSelectedIndex)
+                        .background(getTabBackgroundColour)
                         .frame(
                             width: screenWidth,
                             height: (geo.size.height / 20) * 19
                         )
                     CustomTabBottom(
-                        setParentHeight: (geo.size.height / 20) * 1,
+                        setParentHeight: (geo.size.height / 20) * 1, 
+                        setTabBackgroundColour: getTabBackgroundColour,
                         setTabItemModels: getTabItemModels,
                         setItemCliekd: { clickedItemTitle in
                             if let index = getTabItemModels.firstIndex(
@@ -80,6 +85,7 @@ struct CustomTabView<Content: View>: View {
                 case .TabView :
                     CustomTabBottom(
                         setParentHeight: (geo.size.height / 20) * 1,
+                        setTabBackgroundColour: getTabBackgroundColour,
                         setTabItemModels: getTabItemModels,
                         setItemCliekd: { clickedItemTitle in
                             if let index = getTabItemModels.firstIndex(
@@ -100,8 +106,11 @@ struct CustomTabView<Content: View>: View {
                             width: geo.size.width,
                             height: (geo.size.height / 20) * 19
                         )
+                        .background(getTabBackgroundColour)
+
                 }
             }
+            .background(.clear)
         }
     }
 }
