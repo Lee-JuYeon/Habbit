@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     let setUserModel : UserModel
+    
     var body: some View {
         VStack(alignment : HorizontalAlignment.leading){
             VStack(

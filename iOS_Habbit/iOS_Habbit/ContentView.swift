@@ -31,14 +31,12 @@ struct ContentView: View {
 
             }
             
-            if bottomSheetVM.sheetVisible {
-                CustomBottomSheet(isOpen: $bottomSheetVM.sheetVisible) {
-                    switch(bottomSheetVM.sheetType){
-                        case .AcademyCell :
-                            SheetAcademyCell()
-                        case .AdademyFilter :
-                            SheetAcademyFilter()
-                    }
+            CustomBottomSheet(isOpen: $bottomSheetVM.sheetVisible) {
+                switch(bottomSheetVM.sheetType){
+                    case .AcademyCell :
+                        SheetAcademyCell()
+                    case .AdademyFilter :
+                        SheetAcademyFilter()
                 }
             }
         }

@@ -29,6 +29,10 @@
 		7E34B9672C1331AB0030D589 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9662C1331AB0030D589 /* ProfileView.swift */; };
 		7E34B9692C13320E0030D589 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9682C13320E0030D589 /* ProfileEditView.swift */; };
 		7E34B9702C1334C90030D589 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B96F2C1334C90030D589 /* SettingsView.swift */; };
+		7E34B9722C147DF90030D589 /* AuthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9712C147DF90030D589 /* AuthVM.swift */; };
+		7E34B9742C157BC30030D589 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9732C157BC30030D589 /* ReviewListView.swift */; };
+		7E34B9782C15FE910030D589 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9772C15FE910030D589 /* ActivityListView.swift */; };
+		7E34B97C2C16359D0030D589 /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97B2C16359D0030D589 /* HostView.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* ContentView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -94,6 +98,10 @@
 		7E34B9662C1331AB0030D589 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		7E34B9682C13320E0030D589 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 		7E34B96F2C1334C90030D589 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7E34B9712C147DF90030D589 /* AuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVM.swift; sourceTree = "<group>"; };
+		7E34B9732C157BC30030D589 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		7E34B9772C15FE910030D589 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
+		7E34B97B2C16359D0030D589 /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,7 +209,7 @@
 		7E34B9472C0F17F90030D589 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */,
+				7E34B9792C16356B0030D589 /* AcademyCell */,
 				7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */,
 			);
 			path = Sheet;
@@ -249,6 +257,41 @@
 				7E34B9682C13320E0030D589 /* ProfileEditView.swift */,
 			);
 			path = SubAuthViews;
+			sourceTree = "<group>";
+		};
+		7E34B9752C15FE560030D589 /* ReviewListView */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B9732C157BC30030D589 /* ReviewListView.swift */,
+			);
+			path = ReviewListView;
+			sourceTree = "<group>";
+		};
+		7E34B9762C15FE740030D589 /* ActivityListView */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B9772C15FE910030D589 /* ActivityListView.swift */,
+			);
+			path = ActivityListView;
+			sourceTree = "<group>";
+		};
+		7E34B9792C16356B0030D589 /* AcademyCell */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B97A2C16358E0030D589 /* HostView */,
+				7E34B9762C15FE740030D589 /* ActivityListView */,
+				7E34B9752C15FE560030D589 /* ReviewListView */,
+				7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */,
+			);
+			path = AcademyCell;
+			sourceTree = "<group>";
+		};
+		7E34B97A2C16358E0030D589 /* HostView */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B97B2C16359D0030D589 /* HostView.swift */,
+			);
+			path = HostView;
 			sourceTree = "<group>";
 		};
 		7E5F2B512C095C560035535B = {
@@ -364,6 +407,7 @@
 		7E5F2B8C2C095DDE0035535B /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9712C147DF90030D589 /* AuthVM.swift */,
 			);
 			path = auth;
 			sourceTree = "<group>";
@@ -602,6 +646,7 @@
 				7E34B9672C1331AB0030D589 /* ProfileView.swift in Sources */,
 				7E5F2B602C095C560035535B /* ContentView.swift in Sources */,
 				7E34B9432C0DBECC0030D589 /* CustomBottomSheetVM.swift in Sources */,
+				7E34B9722C147DF90030D589 /* AuthVM.swift in Sources */,
 				7E5F2B952C09B13F0035535B /* CustomTabView.swift in Sources */,
 				7E34B9372C0D81730030D589 /* CustomBottomSheet.swift in Sources */,
 				7E34B95F2C12E5B60030D589 /* FoldableListView.swift in Sources */,
@@ -615,9 +660,12 @@
 				7E5F2B9B2C0ACFB40035535B /* Color.swift in Sources */,
 				7E34B9522C118ACB0030D589 /* NotificationView.swift in Sources */,
 				7E34B9632C132FC10030D589 /* LoginView.swift in Sources */,
+				7E34B9742C157BC30030D589 /* ReviewListView.swift in Sources */,
+				7E34B9782C15FE910030D589 /* ActivityListView.swift in Sources */,
 				7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */,
 				7E34B9692C13320E0030D589 /* ProfileEditView.swift in Sources */,
 				7E5F2BAA2C0C3AAA0035535B /* AcademyHeader.swift in Sources */,
+				7E34B97C2C16359D0030D589 /* HostView.swift in Sources */,
 				7E5F2BA02C0C341C0035535B /* UserModel.swift in Sources */,
 				7E34B9592C12E0030030D589 /* SelfieView.swift in Sources */,
 				7E5F2B932C09B1290035535B /* CustomTabBottom.swift in Sources */,

@@ -12,4 +12,5 @@ struct ReviewModel : Hashable {
     let user : UserModel
     let reviews : String
     let image : String?
+    let stars : Double
 }

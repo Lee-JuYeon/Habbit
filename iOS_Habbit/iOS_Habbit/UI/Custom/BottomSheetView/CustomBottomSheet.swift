@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-struct CustomBottomSheet <Content: View> : View {
+struct CustomBottomSheet<Content: View>: View {
     
     @Binding var isOpen: Bool
     private let getContent: Content
-
 
     init(
         isOpen: Binding<Bool>,
@@ -22,63 +21,68 @@ struct CustomBottomSheet <Content: View> : View {
     }
     
     @GestureState private var translation: CGFloat = 0
-    @State private var offset = CGSize.zero
+    @State private var offset: CGFloat = 0
     @State private var isDragging = false
 
-    
     var body: some View {
-        BlurView(style: .light)
-            .onTapGesture {
-                withAnimation {
-                    isOpen = false
-                }
-            }
-            .overlay {
-                VStack {
-                    Spacer()
-
-                    VStack{
-                        self.getContent
+        if isOpen {
+            Color.gray.opacity(0.1)
+                .onTapGesture {
+                    withAnimation {
+                        isOpen = false
                     }
-                    .background(Color.colourSheet)
-                    .frame(
-                        minWidth: 0,
-                        maxWidth: .infinity,
-                        alignment: Alignment.bottom
-                    )
-                    .clipShape(TopRoundedRectangle(
-                        radius: 20,
-                        corners: [.topLeft, .topRight])
-                    )
-                    .transition(.move(edge: .bottom))
-                    .offset(y: max(offset.height, 0)) // Apply offset based on drag gesture
-                    .animation(isDragging ? .none : .easeInOut)
                 }
-                .padding(
-                    EdgeInsets.init(top: 0, leading: 3, bottom: 0, trailing: 3)
-                )
-                .gesture(
-                    DragGesture()
-                        .updating($translation) { value, state, _ in
-                            state = value.translation.height
-                        }
-                        .onChanged { value in
-                            if value.translation.height > 0 && offset.height < UIScreen.main.bounds.height / 10 {
-                                offset = CGSize(width: 0, height: value.translation.height)
-                                isDragging = true
+                .overlay {
+                    GeometryReader { geometry in
+                        VStack {
+                            Spacer()
+                            VStack {
+                                self.getContent
                             }
+                            .background(BlurView(style: .light))
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                maxHeight: min(geometry.size.height - geometry.safeAreaInsets.top, geometry.size.height * 0.9),
+                                alignment: .top
+                            )
+                            .clipShape(TopRoundedRectangle(
+                                radius: 20,
+                                corners: [.topLeft, .topRight])
+                            )
+                            .transition(.move(edge: .bottom))
+                            .offset(y: max(offset, 0))
+                            .animation(isDragging ? .none : .easeInOut, value: offset) // Apply animation based on dragging state
                         }
-                        .onEnded { value in
-                            if offset.height + value.translation.height > UIScreen.main.bounds.height / 10 {
-                                withAnimation {
-                                    isOpen = false
+                        .padding(
+                            EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+                        )
+                        .gesture(
+                            DragGesture()
+                                .updating($translation) { value, state, _ in
+                                    state = value.translation.height
                                 }
-                            }
-                            offset = .zero
-                            isDragging = false
-                        }
-                )
-            }
-            .edgesIgnoringSafeArea(.all)
+                                .onChanged { value in
+                                    if value.translation.height > 0 {
+                                        offset = value.translation.height
+                                        isDragging = true
+                                    }
+                                }
+                                .onEnded { value in
+                                    if offset > geometry.size.height / 3 {
+                                        withAnimation {
+                                            isOpen = false
+                                        }
+                                    } else {
+                                        withAnimation {
+                                            offset = 0
+                                        }
+                                    }
+                                    isDragging = false
+                                }
+                        )
+                    }
+                }
+        }
     }
 }
