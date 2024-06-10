@@ -47,40 +47,60 @@ struct CustomTabView<Content: View>: View {
     @Environment(\.colorScheme) private var scheme
    
     var body: some View {
-        VStack(
-            alignment : HorizontalAlignment.center,
-            spacing: 0
-        ) {
-            switch(getTabViewType){
-            case .BottomNavigation :
-                getContent(getSelectedIndex)
-                CustomTabBottom(
-                    setTabItemModels: getTabItemModels,
-                    setTabItemImageSize: 25,
-                    setItemCliekd: { clickedItemTitle in
-                        if let index = getTabItemModels.firstIndex(
-                            where: { $0.title == clickedItemTitle }) {
-                            getSelectedIndex = index
-                        } else {
-                            getSelectedIndex = 0
+        GeometryReader{ geo in
+            let screenWidth = geo.size.width
+            let screenHeight = geo.size.height
+            VStack(
+                alignment : HorizontalAlignment.center,
+                spacing: 0
+            ) {
+                switch(getTabViewType){
+                case .BottomNavigation :
+                    getContent(getSelectedIndex)
+                        .frame(
+                            width: screenWidth,
+                            height: (geo.size.height / 20) * 19
+                        )
+                    CustomTabBottom(
+                        setParentHeight: (geo.size.height / 20) * 1,
+                        setTabItemModels: getTabItemModels,
+                        setItemCliekd: { clickedItemTitle in
+                            if let index = getTabItemModels.firstIndex(
+                                where: { $0.title == clickedItemTitle }) {
+                                getSelectedIndex = index
+                            } else {
+                                getSelectedIndex = 0
+                            }
                         }
-                    }
-                )
-            case .TabView :
-                CustomTabBottom(
-                    setTabItemModels: getTabItemModels,
-                    setTabItemImageSize: 25,
-                    setItemCliekd: { clickedItemTitle in
-                        if let index = getTabItemModels.firstIndex(
-                            where: { $0.title == clickedItemTitle }) {
-                            getSelectedIndex = index
-                        } else {
-                            getSelectedIndex = 0
+                    )
+                    .frame(
+                        width: geo.size.width,
+                        height: (geo.size.height / 20) * 1
+                    )
+                case .TabView :
+                    CustomTabBottom(
+                        setParentHeight: (geo.size.height / 20) * 1,
+                        setTabItemModels: getTabItemModels,
+                        setItemCliekd: { clickedItemTitle in
+                            if let index = getTabItemModels.firstIndex(
+                                where: { $0.title == clickedItemTitle }) {
+                                getSelectedIndex = index
+                            } else {
+                                getSelectedIndex = 0
+                            }
                         }
-                    }
-                )
-                
-                getContent(getSelectedIndex)
+                    )
+                    .frame(
+                        width: geo.size.width,
+                        height: (geo.size.height / 20) * 1
+                    )
+                    
+                    getContent(getSelectedIndex)
+                        .frame(
+                            width: geo.size.width,
+                            height: (geo.size.height / 20) * 19
+                        )
+                }
             }
         }
     }

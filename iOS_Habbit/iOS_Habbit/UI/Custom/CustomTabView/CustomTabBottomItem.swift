@@ -11,7 +11,7 @@ struct CustomTabBottomItem: View {
     
     private var model : CustomTabItemModel
     @Binding private var currentItem: String
-    private var getTabItemImageSize : CGFloat
+    private var getParentHeight : CGFloat
     private var getItemClicked : (String) -> Void
 
     
@@ -23,7 +23,7 @@ struct CustomTabBottomItem: View {
     ){
         self.model = setModel
         self._currentItem = setCurrentItem
-        self.getTabItemImageSize = setTabItemImageSize
+        self.getParentHeight = setTabItemImageSize
         self.getItemClicked = setItemCliekd
     }
     
@@ -38,12 +38,12 @@ struct CustomTabBottomItem: View {
                 .renderingMode(.template)
                 .foregroundColor( model.title == currentItem ? (scheme == .dark ? Color.white : Color.black) : Color.gray)
                 .frame(
-                    width: model.title == currentItem ? getTabItemImageSize : getTabItemImageSize - 10,
-                    height: model.title == currentItem ? getTabItemImageSize : getTabItemImageSize - 10
+                    width: getParentHeight / 2,
+                    height: getParentHeight / 2
                 )
                 
             
-            Spacer().frame(height: 4)
+//            Spacer().frame(height: 4)
             
             Text(LocalizedStringKey(model.title))
                 .foregroundColor(
@@ -51,11 +51,14 @@ struct CustomTabBottomItem: View {
                     model.title == currentItem ? (scheme == .dark ? Color.white : Color.black) : Color.gray
                 )
                 .font(.system(
-                    size: model.title == currentItem ? getTabItemImageSize - 10 : (getTabItemImageSize - 10) - 5,
+                    size: getParentHeight / 2,
                     weight: model.title == currentItem ? .bold : .light
                 ))
             
         }
+        .frame(
+            height:getParentHeight
+        )
         .onTapGesture {
             currentItem = model.title
             getItemClicked(currentItem)
