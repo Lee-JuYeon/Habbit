@@ -36,7 +36,7 @@ struct CustomTabBottomItem: View {
             Image(model.image)
                 .resizable()
                 .renderingMode(.template)
-                .foregroundColor( model.title == currentItem ? Color.black : Color.gray)
+                .foregroundColor( model.title == currentItem ? (scheme == .dark ? Color.white : Color.black) : Color.gray)
                 .frame(
                     width: model.title == currentItem ? getTabItemImageSize : getTabItemImageSize - 10,
                     height: model.title == currentItem ? getTabItemImageSize : getTabItemImageSize - 10
@@ -48,7 +48,7 @@ struct CustomTabBottomItem: View {
             Text(LocalizedStringKey(model.title))
                 .foregroundColor(
 //                    model.title == currentItem ? Theme.customTabItemColour(forScheme: scheme) : Theme.customTabItemColour(forScheme: scheme)
-                    model.title == currentItem ? Color.black : Color.gray
+                    model.title == currentItem ? (scheme == .dark ? Color.white : Color.black) : Color.gray
                 )
                 .font(.system(
                     size: model.title == currentItem ? getTabItemImageSize - 10 : (getTabItemImageSize - 10) - 5,
