@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GodLifeModel : Hashable {
-    let academyUID : String
+    let godLifeUID : String
     let hostUID : String?
     let image : String?
     let title : String
@@ -20,27 +20,19 @@ struct GodLifeModel : Hashable {
     let type : String? 
     let adminChecked : Bool
     let activityList : [ActivityModel]
+    let members : [[String : String]] // user uid가 key값이고, user의 완장(총무 이런거)가 value임.
+    let userRequest : [String]
+    let qna : [QnAModel]
+    let notice : [GodLifeNotification]
 }
 
-struct ActivityModel : Hashable {
-    let academyUID : String
-    let images : [ActivityImageModel]
-    let date : String
-}
 
-struct ActivityImageModel : Hashable {
-    let imageUID : String
-    let academyUID : String
-    let uploadedUserUID : String
-    let image : String
-    let date : String
-}
 
 extension GodLifeModel {
     static let dummyList : [GodLifeModel] = [
         // Academy 1
         GodLifeModel(
-            academyUID: "academy-1",
+            godLifeUID: "academy-1",
             hostUID: "host-1",
             image: "https://newsimg.sedaily.com/2023/11/08/29X5NVRFTF_1.jpg",
             title: "Python 프로그래밍 입문",

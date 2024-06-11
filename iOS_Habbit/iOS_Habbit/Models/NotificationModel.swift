@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NotificationModel : Hashable {
+    var uid : String
     var title : String
     var notification : String
     var date : Date

@@ -36,6 +36,10 @@
 		7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */; };
 		7E34B9812C177CD90030D589 /* ScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9802C177CD90030D589 /* ScreenVM.swift */; };
 		7E34B9852C184A240030D589 /* GodLifeMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9842C184A240030D589 /* GodLifeMake.swift */; };
+		7E34B9872C18C0100030D589 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9862C18C0100030D589 /* ActivityModel.swift */; };
+		7E34B9892C18C0930030D589 /* QnAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9882C18C0930030D589 /* QnAModel.swift */; };
+		7E34B98B2C18C0A90030D589 /* ActivityImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */; };
+		7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -108,6 +112,10 @@
 		7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewStyle.swift; sourceTree = "<group>"; };
 		7E34B9802C177CD90030D589 /* ScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenVM.swift; sourceTree = "<group>"; };
 		7E34B9842C184A240030D589 /* GodLifeMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeMake.swift; sourceTree = "<group>"; };
+		7E34B9862C18C0100030D589 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		7E34B9882C18C0930030D589 /* QnAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAModel.swift; sourceTree = "<group>"; };
+		7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityImageModel.swift; sourceTree = "<group>"; };
+		7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeNotification.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -479,6 +487,10 @@
 				7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */,
 				7E34B94C2C10821D0030D589 /* NotificationModel.swift */,
 				7E34B9552C121CE20030D589 /* CareerModel.swift */,
+				7E34B9862C18C0100030D589 /* ActivityModel.swift */,
+				7E34B9882C18C0930030D589 /* QnAModel.swift */,
+				7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */,
+				7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -682,6 +694,7 @@
 				7E5F2B602C095C560035535B /* MainView.swift in Sources */,
 				7E34B9432C0DBECC0030D589 /* CustomBottomSheetVM.swift in Sources */,
 				7E34B9722C147DF90030D589 /* AuthVM.swift in Sources */,
+				7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */,
 				7E5F2B952C09B13F0035535B /* CustomTabView.swift in Sources */,
 				7E34B9372C0D81730030D589 /* CustomBottomSheet.swift in Sources */,
 				7E34B95F2C12E5B60030D589 /* FoldableListView.swift in Sources */,
@@ -690,6 +703,7 @@
 				7E34B9562C121CE20030D589 /* CareerModel.swift in Sources */,
 				7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */,
 				7E34B9502C1151AD0030D589 /* SafariView.swift in Sources */,
+				7E34B9872C18C0100030D589 /* ActivityModel.swift in Sources */,
 				7E5F2BAC2C0C3AB70035535B /* GodLifeView.swift in Sources */,
 				7E5F2BA22C0C342E0035535B /* ReviewModel.swift in Sources */,
 				7E5F2B9B2C0ACFB40035535B /* Color.swift in Sources */,
@@ -700,10 +714,12 @@
 				7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */,
 				7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */,
 				7E34B9692C13320E0030D589 /* ProfileEditView.swift in Sources */,
+				7E34B9892C18C0930030D589 /* QnAModel.swift in Sources */,
 				7E5F2BAA2C0C3AAA0035535B /* GodLifeHeader.swift in Sources */,
 				7E34B97C2C16359D0030D589 /* HostView.swift in Sources */,
 				7E5F2BA02C0C341C0035535B /* UserModel.swift in Sources */,
 				7E34B9592C12E0030030D589 /* SelfieView.swift in Sources */,
+				7E34B98B2C18C0A90030D589 /* ActivityImageModel.swift in Sources */,
 				7E5F2B932C09B1290035535B /* CustomTabBottom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
