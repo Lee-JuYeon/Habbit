@@ -40,6 +40,7 @@
 		7E34B9892C18C0930030D589 /* QnAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9882C18C0930030D589 /* QnAModel.swift */; };
 		7E34B98B2C18C0A90030D589 /* ActivityImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */; };
 		7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */; };
+		7E34B98F2C18C48C0030D589 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98E2C18C48C0030D589 /* MembersModel.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -116,6 +117,7 @@
 		7E34B9882C18C0930030D589 /* QnAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAModel.swift; sourceTree = "<group>"; };
 		7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityImageModel.swift; sourceTree = "<group>"; };
 		7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeNotification.swift; sourceTree = "<group>"; };
+		7E34B98E2C18C48C0030D589 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				7E34B9882C18C0930030D589 /* QnAModel.swift */,
 				7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */,
 				7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */,
+				7E34B98E2C18C48C0030D589 /* MembersModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				7E34B9372C0D81730030D589 /* CustomBottomSheet.swift in Sources */,
 				7E34B95F2C12E5B60030D589 /* FoldableListView.swift in Sources */,
 				7E34B9612C132F1E0030D589 /* AuthView.swift in Sources */,
+				7E34B98F2C18C48C0030D589 /* MembersModel.swift in Sources */,
 				7E34B94D2C10821D0030D589 /* NotificationModel.swift in Sources */,
 				7E34B9562C121CE20030D589 /* CareerModel.swift in Sources */,
 				7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */,

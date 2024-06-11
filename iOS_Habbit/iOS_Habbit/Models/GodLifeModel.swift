@@ -20,11 +20,12 @@ struct GodLifeModel : Hashable {
     let type : String? 
     let adminChecked : Bool
     let activityList : [ActivityModel]
-    let members : [[String : String]] // user uid가 key값이고, user의 완장(총무 이런거)가 value임.
+    let members : [MembersModel] 
     let userRequest : [String]
     let qna : [QnAModel]
     let notice : [GodLifeNotification]
 }
+
 
 
 
