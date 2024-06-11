@@ -34,58 +34,58 @@ struct GodLifeCell : View {
     }
 
     var body : some View {
-        HStack(
-            alignment: .top
-        ){
-            // 네트워크 이미지
-            AsyncImage(
-                url: URL(string: getModel?.image ?? "")
-            ) { image in
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 150, height: 150)
-            } placeholder : {
-                ProgressView()
-                    .frame(width: 150, height: 150)
+        ZStack{
+            HStack(
+                alignment: .top
+            ){
+                // 네트워크 이미지
+                AsyncImage(
+                    url: URL(string: getModel?.image ?? "")
+                ) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
+                } placeholder : {
+                    ProgressView()
+                        .frame(width: 150, height: 150)
+                }
+                
+                LazyVStack(alignment : HorizontalAlignment.leading){
+                    Text(getModel?.title ?? "")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Text(getModel?.type ?? "")
+                        .font(.title3)
+                    Text("📍 \(String(describing: getModel?.location ?? ""))")
+                        .font(.title3)
+                    Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
+                }
             }
-            
-            LazyVStack(alignment : HorizontalAlignment.leading){
-                Text(getModel?.title ?? "")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Text(getModel?.type ?? "")
-                    .font(.title3)
-                Text("📍 \(String(describing: getModel?.location ?? ""))")
-                    .font(.title3)
-                Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
+            .overlay {
+                if getModel?.adminChecked == false{
+                    ZStack(alignment : .center){
+                        Color.gray.opacity(0.8)
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: .infinity
+                            )
+                        
+                        Text("개설 승낙을 기다리는 중입니다...")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                    }
+                }
             }
         }
         .onTapGesture {
-//            withAnimation {
-//                bottomSheetVM.academyModel = getModel
-//                bottomSheetVM.sheetType = .AcademyCell
-//                bottomSheetVM.sheetVisible.toggle()
-//            }
-            onClick(getModel!)
+            if getModel?.adminChecked == true{
+                onClick(getModel!)
+            }
         }
         .frame(maxHeight: 150)
-        .swipeActions(edge: .trailing){
-            Button(action: {
-                // 저장 액션 수행
-                print("Save tapped for ")
-            }) {
-                Label("Save", systemImage: "square.and.arrow.down")
-            }
-        }
-        .swipeActions(edge: .trailing){
-            Button(action: {
-                // 신고 액션 수행
-                print("신고 tapped for ")
-            }) {
-                Label("신고", systemImage: "square.and.arrow.down")
-            }
-        }
         .padding(
             EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0)
         )

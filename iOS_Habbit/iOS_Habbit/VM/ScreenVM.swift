@@ -14,6 +14,8 @@ enum ScreenType {
     case Profile
     case GodLife_Detail
     case GodLife_Make
+    case GodLife_Edit
+    case GodLife_Exit
 }
 
 class ScreenVM: ObservableObject {

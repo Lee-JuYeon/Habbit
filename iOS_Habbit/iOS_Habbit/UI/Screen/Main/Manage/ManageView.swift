@@ -10,34 +10,39 @@ import SwiftUI
 struct ManageView : View {
     
     @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
+    @EnvironmentObject private var screenVM : ScreenVM
     
-    private let titleSize : CGFloat = 25
+    private let titleSize : CGFloat = 30
     var body : some View {
-        GeometryReader { geo in
-            let width = geo.size.width
-            let height = geo.size.height
-            ScrollView(
-                Axis.Set.vertical
-            ){
-                LazyVStack(alignment : HorizontalAlignment.leading){
-                    Text("내가 개설한 갓생")
-                        .font(.system(size: titleSize))
-                        .fontWeight(.bold)
-                   
-                    ForEach(GodLifeModel.dummyList, id: \.self){ model in
-                        GodLifeCell(setModel: model) { cellModel in
-                                // cellModel
-                        }
+        ScrollView(
+            Axis.Set.vertical
+        ){
+            LazyVStack(alignment : HorizontalAlignment.leading){
+                Text("내가 개설한 갓생")
+                    .padding(10)
+                    .font(.system(size: titleSize))
+                    .fontWeight(.bold)
+                    .padding(10)
+               
+                ForEach(GodLifeModel.dummyList, id: \.self){ model in
+                    GodLifeCell(setModel: model) { cellModel in
+                            // cellModel
+                        screenVM.screenType = .GodLife_Edit
+                        screenVM.currentGodLifeModel = cellModel
                     }
-                    
-                    Text("내가 가입한 갓생")
-                        .font(.system(size: titleSize))
-                        .fontWeight(.bold)
-                   
-                    ForEach(GodLifeModel.dummyList, id: \.self){ model in
-                        GodLifeCell(setModel: model) { cellModel in
-                                // cellModel
-                        }
+                }
+                
+                Text("내가 가입한 갓생")
+                    .padding(10)
+                    .font(.system(size: titleSize))
+                    .fontWeight(.bold)
+                    .padding(10)
+                
+                ForEach(GodLifeModel.dummyList, id: \.self){ model in
+                    GodLifeCell(setModel: model) { cellModel in
+                            // cellModel
+                        screenVM.screenType = .GodLife_Exit
+                        screenVM.currentGodLifeModel = cellModel
                     }
                 }
             }
