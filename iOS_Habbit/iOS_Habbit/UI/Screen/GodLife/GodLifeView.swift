@@ -8,19 +8,25 @@
 import SwiftUI
 
 
-struct AcademyView : View {
+struct GodLifeView : View {
     
     @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
+    @EnvironmentObject private var screenVM : ScreenVM
     
     var body : some View {
+        
         VStack{
-            AcademyHeader()
+            GodLifeHeader()
             
             RecyclerView(
                 setAxis: RecyclerViewAxis.VERTICAL
             ) {
-                ForEach(AcademyModel.dummyList, id:\.self){ model in
-                    AcademyCell(setModel: model)
+                ForEach(GodLifeModel.dummyList, id:\.self){ model in
+                    GodLifeCell(setModel: model) { cellModel in
+                            // cellModel
+                        screenVM.screenType = .GodLife_Detail
+                        screenVM.currentGodLifeModel = cellModel
+                    }
                 }
             }
         }

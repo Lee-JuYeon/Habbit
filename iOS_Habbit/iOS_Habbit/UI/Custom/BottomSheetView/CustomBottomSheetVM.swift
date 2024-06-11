@@ -11,6 +11,6 @@ class CustomBottomSheetVM: ObservableObject {
     
     @Published var sheetType: CustomBottomSheetType = .AcademyCell
     @Published var sheetVisible : Bool = false
-    @Published var academyModel : AcademyModel? = nil
+    @Published var academyModel : GodLifeModel? = nil
     
 }

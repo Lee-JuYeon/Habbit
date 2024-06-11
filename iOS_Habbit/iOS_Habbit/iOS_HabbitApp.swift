@@ -11,10 +11,12 @@ import SwiftUI
 struct iOS_HabbitApp: App {
 
     @StateObject private var bottomSheetVM = CustomBottomSheetVM()
+    @StateObject private var screenVM = ScreenVM()
     var body: some Scene {
         WindowGroup {
             MainView()
                 .environmentObject(bottomSheetVM)
+                .environmentObject(screenVM)
         }
     }
 }

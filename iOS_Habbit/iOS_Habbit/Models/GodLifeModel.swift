@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AcademyModel : Hashable {
+struct GodLifeModel : Hashable {
     let academyUID : String
     let hostUID : String?
     let image : String?
@@ -36,16 +36,16 @@ struct ActivityImageModel : Hashable {
     let date : String
 }
 
-extension AcademyModel {
-    static let dummyList : [AcademyModel] = [
+extension GodLifeModel {
+    static let dummyList : [GodLifeModel] = [
         // Academy 1
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-1",
             hostUID: "host-1",
             image: "https://newsimg.sedaily.com/2023/11/08/29X5NVRFTF_1.jpg",
             title: "Python 프로그래밍 입문",
             location: "서울 강남구",
-            monthlyPay: 250000,
+            monthlyPay: 0,
             explain: "초보자를 위한 Python 프로그래밍 입문 모임입니다. 기본적인 문법부터 실습까지 배우고, 간단한 프로그램을 만들어 보세요.",
             reviewList: [
                 ReviewModel(
@@ -161,13 +161,13 @@ extension AcademyModel {
         ),
 
         // Academy 2
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-2",
             hostUID: "host-2",
             image: "https://pds.skyedaily.com/news_data2019/20201214123511_fbycyzdb.jpg",
             title: "수영 실력 향상",
             location: "인천 연수구",
-            monthlyPay: 150000,
+            monthlyPay: nil,
             explain: "수영 실력을 향상시키고 싶은 분들을 위한 모임입니다. 기본적인 자세와 스트로크부터 훈련까지, 전문 코치가 직접 지도해 드립니다.",
             reviewList: [
                 ReviewModel(
@@ -282,7 +282,7 @@ extension AcademyModel {
         ),
 
         // Academy 3
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-3",
             hostUID: "host-3",
             image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
@@ -403,7 +403,7 @@ extension AcademyModel {
         ),
 
         // Academy 4
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-4",
             hostUID: "host-4",
             image: "academy_image_4",
@@ -476,7 +476,7 @@ extension AcademyModel {
         ),
 
         // Academy 5
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-5",
             hostUID: "host-5",
             image: "academy_image_5",
@@ -549,7 +549,7 @@ extension AcademyModel {
         ),
 
         // Academy 6
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-6",
             hostUID: "host-6",
             image: "academy_image_6",
@@ -622,7 +622,7 @@ extension AcademyModel {
         ),
 
         // Academy 7
-        AcademyModel(
+        GodLifeModel(
             academyUID: "academy-7",
             hostUID: "host-7",
             image: "academy_image_7",

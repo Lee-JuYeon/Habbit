@@ -24,8 +24,10 @@ struct ManageView : View {
                         setTitleSize: 25, 
                         setHeight: 400
                     ) {
-                        ForEach(AcademyModel.dummyList, id: \.self){ model in
-                            AcademyCell(setModel: model)
+                        ForEach(GodLifeModel.dummyList, id: \.self){ model in
+                            GodLifeCell(setModel: model) { cellModel in
+                                    // cellModel
+                            }
                         }
                     }
                     FoldableListView(
@@ -33,8 +35,10 @@ struct ManageView : View {
                         setTitleSize: 25,
                         setHeight: 400
                     ) {
-                        ForEach(AcademyModel.dummyList, id: \.self){ model in
-                            AcademyCell(setModel: model)
+                        ForEach(GodLifeModel.dummyList, id: \.self){ model in
+                            GodLifeCell(setModel: model) { cellModel in
+                                    // cellModel
+                            }
                         }
                     }
                     FoldableListView(
@@ -42,8 +46,10 @@ struct ManageView : View {
                         setTitleSize: 25,
                         setHeight: 400
                     ) {
-                        ForEach(AcademyModel.dummyList, id: \.self){ model in
-                            AcademyCell(setModel: model)
+                        ForEach(GodLifeModel.dummyList, id: \.self){ model in
+                            GodLifeCell(setModel: model) { cellModel in
+                                    // cellModel
+                            }
                         }
                     }
                 }

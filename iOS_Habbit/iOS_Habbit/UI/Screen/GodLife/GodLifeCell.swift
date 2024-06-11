@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct AcademyCell : View {
+struct GodLifeCell : View {
     
-    private var getModel : AcademyModel? = nil
+    private var getModel : GodLifeModel? = nil
+    private var onClick : (GodLifeModel) -> ()
     init(
-        setModel : AcademyModel
+        setModel : GodLifeModel,
+        onClick : @escaping (GodLifeModel) -> ()
     ){
         self.getModel = setModel
+        self.onClick = onClick
     }
     
-    private let dummyImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiVMXkVnFDabJrNMhQ4A5xZvVqXh3Nv2gYWg&s"
     @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
-
+    @EnvironmentObject private var screenVM : ScreenVM
     
     private func monthlyPayConverter(pay : Double?) -> String {
         return switch(pay){
@@ -37,7 +39,7 @@ struct AcademyCell : View {
         ){
             // 네트워크 이미지
             AsyncImage(
-                url: URL(string: getModel?.image ?? dummyImage)
+                url: URL(string: getModel?.image ?? "")
             ) { image in
                 image
                     .resizable()
@@ -52,19 +54,20 @@ struct AcademyCell : View {
                 Text(getModel?.title ?? "")
                     .font(.title2)
                     .fontWeight(.bold)
+                Text(getModel?.type ?? "")
+                    .font(.title3)
                 Text("📍 \(String(describing: getModel?.location ?? ""))")
                     .font(.title3)
-
                 Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
             }
         }
-       
         .onTapGesture {
-            withAnimation {
-                bottomSheetVM.academyModel = getModel
-                bottomSheetVM.sheetType = .AcademyCell
-                bottomSheetVM.sheetVisible.toggle()
-            }
+//            withAnimation {
+//                bottomSheetVM.academyModel = getModel
+//                bottomSheetVM.sheetType = .AcademyCell
+//                bottomSheetVM.sheetVisible.toggle()
+//            }
+            onClick(getModel!)
         }
         .frame(maxHeight: 150)
         .swipeActions(edge: .trailing){

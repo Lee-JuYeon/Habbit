@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AcademyHeader: View {
+struct GodLifeHeader: View {
     
     @State private var text: String = ""
     @State private var visibleGodLifeCard : Bool = false

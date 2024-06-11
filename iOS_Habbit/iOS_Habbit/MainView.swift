@@ -10,30 +10,20 @@ import SwiftUI
 struct MainView: View {
 
     @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
+    @EnvironmentObject private var screenVM : ScreenVM
         
-    @State private var pageIndex = 0
     var body: some View {
         ZStack{
-            CustomTabView(
-                setTabViewStyle: .BottomNavigation,
-                setTabBackgroundColour: .backgroundColour,
-                setTabItemModels: [
-                    CustomTabItemModel(image: "image_up", title: "갓생"),
-                    CustomTabItemModel(image: "image_cards", title: "관리"),
-                    CustomTabItemModel(image: "image_profile", title: "프로필"),
-                ],
-                setSelectedIndex: $pageIndex) { page in
-                    switch(page) {
-                    case 0 :
-                        AcademyView()
-                    case 1 :
-                        ManageView()
-                    case 2 :
-                        SettingsView()
-                    default :
-                        AcademyView()
-                    }
-                }
+            switch(screenVM.screenType){
+            case .MainView :
+                mainView()
+            case .GodLife_Detail :
+                SheetAcademyCell()
+            case .GodLife_Make :
+                SheetAcademyCell()
+            default :
+                mainView()
+            }
             
             CustomBottomSheet(isOpen: $bottomSheetVM.sheetVisible) {
                 switch(bottomSheetVM.sheetType){
@@ -45,26 +35,27 @@ struct MainView: View {
             }
         }
     }
-}
-
-struct BottomNavigationView : View {
     
-    private var getBottomList: [AnyView]
-    private var getScreenList: [AnyView]
-        
-    init(
-        setBottomList: [AnyView],
-        setScreenList: [AnyView]
-    ) {
-        self.getBottomList = setBottomList
-        self.getScreenList = setScreenList
-    }
-    
-    @State private var selectedIndex: Int = 0
-        
-    var body : some View {
-        VStack{
-            
-        }
+    private func mainView() -> some View {
+        return CustomTabView(
+            setTabViewStyle: .BottomNavigation,
+            setTabBackgroundColour: .backgroundColour,
+            setTabItemModels: [
+                CustomTabItemModel(image: "image_up", title: "갓생"),
+                CustomTabItemModel(image: "image_cards", title: "관리"),
+                CustomTabItemModel(image: "image_profile", title: "프로필"),
+            ],
+            setSelectedIndex: $screenVM.pageIndex) { page in
+                switch(page) {
+                case 0 :
+                    GodLifeView()
+                case 1 :
+                    ManageView()
+                case 2 :
+                    SettingsView()
+                default :
+                    GodLifeView()
+                }
+            }
     }
 }

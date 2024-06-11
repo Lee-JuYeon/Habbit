@@ -34,6 +34,7 @@
 		7E34B9782C15FE910030D589 /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9772C15FE910030D589 /* ActivityListView.swift */; };
 		7E34B97C2C16359D0030D589 /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97B2C16359D0030D589 /* HostView.swift */; };
 		7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */; };
+		7E34B9812C177CD90030D589 /* ScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9802C177CD90030D589 /* ScreenVM.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -50,10 +51,10 @@
 		7E5F2B9D2C0AD06F0035535B /* colorTheme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B9C2C0AD06F0035535B /* colorTheme.xcassets */; };
 		7E5F2BA02C0C341C0035535B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B9F2C0C341C0035535B /* UserModel.swift */; };
 		7E5F2BA22C0C342E0035535B /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA12C0C342E0035535B /* ReviewModel.swift */; };
-		7E5F2BA42C0C343F0035535B /* AcademyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA32C0C343F0035535B /* AcademyModel.swift */; };
-		7E5F2BA82C0C34650035535B /* AcademyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA72C0C34650035535B /* AcademyCell.swift */; };
-		7E5F2BAA2C0C3AAA0035535B /* AcademyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA92C0C3AAA0035535B /* AcademyHeader.swift */; };
-		7E5F2BAC2C0C3AB70035535B /* AcademyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BAB2C0C3AB70035535B /* AcademyView.swift */; };
+		7E5F2BA42C0C343F0035535B /* GodLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */; };
+		7E5F2BA82C0C34650035535B /* GodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA72C0C34650035535B /* GodLifeCell.swift */; };
+		7E5F2BAA2C0C3AAA0035535B /* GodLifeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */; };
+		7E5F2BAC2C0C3AB70035535B /* GodLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BAB2C0C3AB70035535B /* GodLifeView.swift */; };
 		7E5F2BB12C0C72340035535B /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB02C0C72340035535B /* DropDownView.swift */; };
 		7E5F2BB42C0C88DF0035535B /* RecyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB32C0C88DF0035535B /* RecyclerView.swift */; };
 		7E5F2BB72C0CAB010035535B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB62C0CAB010035535B /* ImagePicker.swift */; };
@@ -104,6 +105,7 @@
 		7E34B9772C15FE910030D589 /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
 		7E34B97B2C16359D0030D589 /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
 		7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewStyle.swift; sourceTree = "<group>"; };
+		7E34B9802C177CD90030D589 /* ScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenVM.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -124,10 +126,10 @@
 		7E5F2B9C2C0AD06F0035535B /* colorTheme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colorTheme.xcassets; sourceTree = "<group>"; };
 		7E5F2B9F2C0C341C0035535B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7E5F2BA12C0C342E0035535B /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
-		7E5F2BA32C0C343F0035535B /* AcademyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyModel.swift; sourceTree = "<group>"; };
-		7E5F2BA72C0C34650035535B /* AcademyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyCell.swift; sourceTree = "<group>"; };
-		7E5F2BA92C0C3AAA0035535B /* AcademyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyHeader.swift; sourceTree = "<group>"; };
-		7E5F2BAB2C0C3AB70035535B /* AcademyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademyView.swift; sourceTree = "<group>"; };
+		7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeModel.swift; sourceTree = "<group>"; };
+		7E5F2BA72C0C34650035535B /* GodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeCell.swift; sourceTree = "<group>"; };
+		7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeHeader.swift; sourceTree = "<group>"; };
+		7E5F2BAB2C0C3AB70035535B /* GodLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeView.swift; sourceTree = "<group>"; };
 		7E5F2BB02C0C72340035535B /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		7E5F2BB32C0C88DF0035535B /* RecyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerView.swift; sourceTree = "<group>"; };
 		7E5F2BB62C0CAB010035535B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -280,10 +282,6 @@
 		7E34B9792C16356B0030D589 /* AcademyCell */ = {
 			isa = PBXGroup;
 			children = (
-				7E34B97A2C16358E0030D589 /* HostView */,
-				7E34B9762C15FE740030D589 /* ActivityListView */,
-				7E34B9752C15FE560030D589 /* ReviewListView */,
-				7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */,
 			);
 			path = AcademyCell;
 			sourceTree = "<group>";
@@ -294,6 +292,25 @@
 				7E34B97B2C16359D0030D589 /* HostView.swift */,
 			);
 			path = HostView;
+			sourceTree = "<group>";
+		};
+		7E34B97F2C177CC70030D589 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B9802C177CD90030D589 /* ScreenVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		7E34B9822C182DAB0030D589 /* GodLifeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B97A2C16358E0030D589 /* HostView */,
+				7E34B9762C15FE740030D589 /* ActivityListView */,
+				7E34B9752C15FE560030D589 /* ReviewListView */,
+				7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */,
+			);
+			path = GodLifeDetail;
 			sourceTree = "<group>";
 		};
 		7E5F2B512C095C560035535B = {
@@ -319,6 +336,7 @@
 		7E5F2B5C2C095C560035535B /* iOS_Habbit */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B97F2C177CC70030D589 /* VM */,
 				7E34B93E2C0D9EC00030D589 /* Util */,
 				7E5F2B9E2C0C34100035535B /* Models */,
 				7E5F2B8E2C09AAE50035535B /* Extensions */,
@@ -371,10 +389,11 @@
 		7E5F2B892C095DCD0035535B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9822C182DAB0030D589 /* GodLifeDetail */,
 				7E34B9472C0F17F90030D589 /* Sheet */,
 				7E34B9462C0F16D10030D589 /* Manage */,
 				7E5F2BA62C0C34590035535B /* Settings */,
-				7E5F2BA52C0C34520035535B /* Academy */,
+				7E5F2BA52C0C34520035535B /* GodLife */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -446,21 +465,21 @@
 			children = (
 				7E5F2B9F2C0C341C0035535B /* UserModel.swift */,
 				7E5F2BA12C0C342E0035535B /* ReviewModel.swift */,
-				7E5F2BA32C0C343F0035535B /* AcademyModel.swift */,
+				7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */,
 				7E34B94C2C10821D0030D589 /* NotificationModel.swift */,
 				7E34B9552C121CE20030D589 /* CareerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		7E5F2BA52C0C34520035535B /* Academy */ = {
+		7E5F2BA52C0C34520035535B /* GodLife */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F2BA72C0C34650035535B /* AcademyCell.swift */,
-				7E5F2BA92C0C3AAA0035535B /* AcademyHeader.swift */,
-				7E5F2BAB2C0C3AB70035535B /* AcademyView.swift */,
+				7E5F2BA72C0C34650035535B /* GodLifeCell.swift */,
+				7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */,
+				7E5F2BAB2C0C3AB70035535B /* GodLifeView.swift */,
 			);
-			path = Academy;
+			path = GodLife;
 			sourceTree = "<group>";
 		};
 		7E5F2BA62C0C34590035535B /* Settings */ = {
@@ -638,8 +657,9 @@
 				7E34B9492C0F18090030D589 /* SheetAcademyCell.swift in Sources */,
 				7E5F2B912C09B0F50035535B /* CustomTabItemModel.swift in Sources */,
 				7E34B93A2C0D872D0030D589 /* TopRoundedRectangle.swift in Sources */,
-				7E5F2BA42C0C343F0035535B /* AcademyModel.swift in Sources */,
-				7E5F2BA82C0C34650035535B /* AcademyCell.swift in Sources */,
+				7E34B9812C177CD90030D589 /* ScreenVM.swift in Sources */,
+				7E5F2BA42C0C343F0035535B /* GodLifeModel.swift in Sources */,
+				7E5F2BA82C0C34650035535B /* GodLifeCell.swift in Sources */,
 				7E34B93D2C0D89450030D589 /* BlurView.swift in Sources */,
 				7E34B9702C1334C90030D589 /* SettingsView.swift in Sources */,
 				7E5F2BB12C0C72340035535B /* DropDownView.swift in Sources */,
@@ -658,7 +678,7 @@
 				7E34B9562C121CE20030D589 /* CareerModel.swift in Sources */,
 				7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */,
 				7E34B9502C1151AD0030D589 /* SafariView.swift in Sources */,
-				7E5F2BAC2C0C3AB70035535B /* AcademyView.swift in Sources */,
+				7E5F2BAC2C0C3AB70035535B /* GodLifeView.swift in Sources */,
 				7E5F2BA22C0C342E0035535B /* ReviewModel.swift in Sources */,
 				7E5F2B9B2C0ACFB40035535B /* Color.swift in Sources */,
 				7E34B9522C118ACB0030D589 /* NotificationView.swift in Sources */,
@@ -668,7 +688,7 @@
 				7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */,
 				7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */,
 				7E34B9692C13320E0030D589 /* ProfileEditView.swift in Sources */,
-				7E5F2BAA2C0C3AAA0035535B /* AcademyHeader.swift in Sources */,
+				7E5F2BAA2C0C3AAA0035535B /* GodLifeHeader.swift in Sources */,
 				7E34B97C2C16359D0030D589 /* HostView.swift in Sources */,
 				7E5F2BA02C0C341C0035535B /* UserModel.swift in Sources */,
 				7E34B9592C12E0030030D589 /* SelfieView.swift in Sources */,
