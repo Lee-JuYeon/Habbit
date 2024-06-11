@@ -13,7 +13,7 @@
 		7E34B9412C0D9EEE0030D589 /* NeomorphhismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9402C0D9EEE0030D589 /* NeomorphhismView.swift */; };
 		7E34B9432C0DBECC0030D589 /* CustomBottomSheetVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9422C0DBECC0030D589 /* CustomBottomSheetVM.swift */; };
 		7E34B9452C0DC5370030D589 /* CustomBottomSheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */; };
-		7E34B9492C0F18090030D589 /* SheetAcademyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */; };
+		7E34B9492C0F18090030D589 /* GodLifeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9482C0F18090030D589 /* GodLifeDetail.swift */; };
 		7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */; };
 		7E34B94D2C10821D0030D589 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B94C2C10821D0030D589 /* NotificationModel.swift */; };
 		7E34B9502C1151AD0030D589 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B94F2C1151AD0030D589 /* SafariView.swift */; };
@@ -35,6 +35,7 @@
 		7E34B97C2C16359D0030D589 /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97B2C16359D0030D589 /* HostView.swift */; };
 		7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */; };
 		7E34B9812C177CD90030D589 /* ScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9802C177CD90030D589 /* ScreenVM.swift */; };
+		7E34B9852C184A240030D589 /* GodLifeMake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9842C184A240030D589 /* GodLifeMake.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -84,7 +85,7 @@
 		7E34B9402C0D9EEE0030D589 /* NeomorphhismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphhismView.swift; sourceTree = "<group>"; };
 		7E34B9422C0DBECC0030D589 /* CustomBottomSheetVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetVM.swift; sourceTree = "<group>"; };
 		7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetType.swift; sourceTree = "<group>"; };
-		7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAcademyCell.swift; sourceTree = "<group>"; };
+		7E34B9482C0F18090030D589 /* GodLifeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeDetail.swift; sourceTree = "<group>"; };
 		7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAcademyFilter.swift; sourceTree = "<group>"; };
 		7E34B94C2C10821D0030D589 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		7E34B94F2C1151AD0030D589 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		7E34B97B2C16359D0030D589 /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
 		7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewStyle.swift; sourceTree = "<group>"; };
 		7E34B9802C177CD90030D589 /* ScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenVM.swift; sourceTree = "<group>"; };
+		7E34B9842C184A240030D589 /* GodLifeMake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeMake.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -213,7 +215,6 @@
 		7E34B9472C0F17F90030D589 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				7E34B9792C16356B0030D589 /* AcademyCell */,
 				7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */,
 			);
 			path = Sheet;
@@ -279,11 +280,14 @@
 			path = ActivityListView;
 			sourceTree = "<group>";
 		};
-		7E34B9792C16356B0030D589 /* AcademyCell */ = {
+		7E34B9792C16356B0030D589 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9462C0F16D10030D589 /* Manage */,
+				7E5F2BA62C0C34590035535B /* Settings */,
+				7E5F2BA52C0C34520035535B /* GodLife */,
 			);
-			path = AcademyCell;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		7E34B97A2C16358E0030D589 /* HostView */ = {
@@ -308,9 +312,17 @@
 				7E34B97A2C16358E0030D589 /* HostView */,
 				7E34B9762C15FE740030D589 /* ActivityListView */,
 				7E34B9752C15FE560030D589 /* ReviewListView */,
-				7E34B9482C0F18090030D589 /* SheetAcademyCell.swift */,
+				7E34B9482C0F18090030D589 /* GodLifeDetail.swift */,
 			);
 			path = GodLifeDetail;
+			sourceTree = "<group>";
+		};
+		7E34B9832C1842140030D589 /* GodLifeMake */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B9842C184A240030D589 /* GodLifeMake.swift */,
+			);
+			path = GodLifeMake;
 			sourceTree = "<group>";
 		};
 		7E5F2B512C095C560035535B = {
@@ -389,11 +401,10 @@
 		7E5F2B892C095DCD0035535B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9792C16356B0030D589 /* Main */,
 				7E34B9822C182DAB0030D589 /* GodLifeDetail */,
+				7E34B9832C1842140030D589 /* GodLifeMake */,
 				7E34B9472C0F17F90030D589 /* Sheet */,
-				7E34B9462C0F16D10030D589 /* Manage */,
-				7E5F2BA62C0C34590035535B /* Settings */,
-				7E5F2BA52C0C34520035535B /* GodLife */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -654,7 +665,8 @@
 				7E5F2BB42C0C88DF0035535B /* RecyclerView.swift in Sources */,
 				7E34B9412C0D9EEE0030D589 /* NeomorphhismView.swift in Sources */,
 				7E5F2BB72C0CAB010035535B /* ImagePicker.swift in Sources */,
-				7E34B9492C0F18090030D589 /* SheetAcademyCell.swift in Sources */,
+				7E34B9852C184A240030D589 /* GodLifeMake.swift in Sources */,
+				7E34B9492C0F18090030D589 /* GodLifeDetail.swift in Sources */,
 				7E5F2B912C09B0F50035535B /* CustomTabItemModel.swift in Sources */,
 				7E34B93A2C0D872D0030D589 /* TopRoundedRectangle.swift in Sources */,
 				7E34B9812C177CD90030D589 /* ScreenVM.swift in Sources */,

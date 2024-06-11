@@ -8,6 +8,5 @@
 import SwiftUI
 
 enum CustomBottomSheetType {
-    case AcademyCell
     case AdademyFilter
 }

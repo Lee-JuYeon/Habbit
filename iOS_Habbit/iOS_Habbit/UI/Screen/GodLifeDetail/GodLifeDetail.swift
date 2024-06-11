@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SheetAcademyCell: View {
+struct GodLifeDetail : View {
     
     @EnvironmentObject private var screenVM : ScreenVM
     

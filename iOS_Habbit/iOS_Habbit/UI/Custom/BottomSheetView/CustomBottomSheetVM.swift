@@ -9,7 +9,7 @@ import SwiftUI
 
 class CustomBottomSheetVM: ObservableObject {
     
-    @Published var sheetType: CustomBottomSheetType = .AcademyCell
+    @Published var sheetType: CustomBottomSheetType = .AdademyFilter
     @Published var sheetVisible : Bool = false
     @Published var academyModel : GodLifeModel? = nil
     

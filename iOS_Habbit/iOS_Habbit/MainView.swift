@@ -18,17 +18,16 @@ struct MainView: View {
             case .MainView :
                 mainView()
             case .GodLife_Detail :
-                SheetAcademyCell()
+                GodLifeDetail()
             case .GodLife_Make :
-                SheetAcademyCell()
+                GodLifeMake()
             default :
                 mainView()
             }
             
             CustomBottomSheet(isOpen: $bottomSheetVM.sheetVisible) {
                 switch(bottomSheetVM.sheetType){
-                    case .AcademyCell :
-                        SheetAcademyCell()
+                    
                     case .AdademyFilter :
                         SheetAcademyFilter()
                 }

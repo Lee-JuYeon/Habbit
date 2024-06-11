@@ -14,7 +14,7 @@ struct GodLifeHeader: View {
     @State private var visibleFilter : Bool = false
     
     @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
-
+    @EnvironmentObject private var screenVM : ScreenVM
     
     var body: some View {
         VStack(
@@ -46,9 +46,7 @@ struct GodLifeHeader: View {
                             height: 30
                        )
                        .onTapGesture {
-                           withAnimation {
-                               visibleGodLifeCard.toggle()
-                           }
+                           screenVM.screenType = .GodLife_Make
                        }
                    
                    // 필터링
