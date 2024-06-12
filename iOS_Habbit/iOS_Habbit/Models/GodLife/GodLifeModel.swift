@@ -150,12 +150,30 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "총무"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: ["uid1","uid1","uid1","uid1"],
+            qna: [
+                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+            ],
+            notice: [
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내", notice: "김총무입니다. 다음달부터 회원권을 20프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.02", writerUID: "uid1"),
             ]
         ),
 
         // Academy 2
         GodLifeModel(
-            academyUID: "academy-2",
+            godLifeUID: "academy-2",
             hostUID: "host-2",
             image: "https://pds.skyedaily.com/news_data2019/20201214123511_fbycyzdb.jpg",
             title: "수영 실력 향상",
@@ -271,12 +289,30 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: ["uid1"],
+            qna: [
+                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다")
+            ],
+            notice: [
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.01", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내", notice: "김총무입니다. 다음달부터 회원권을 20프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내", notice: "김총무입니다. 다음달부터 회원권을 20프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.03", writerUID: "uid1"),
             ]
         ),
 
         // Academy 3
         GodLifeModel(
-            academyUID: "academy-3",
+            godLifeUID: "academy-3",
             hostUID: "host-3",
             image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
             title: "영어 회화 실력 향상",
@@ -392,12 +428,24 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "총무"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: [],
+            qna: [
+            ],
+            notice: [
             ]
         ),
 
         // Academy 4
         GodLifeModel(
-            academyUID: "academy-4",
+            godLifeUID: "academy-4",
             hostUID: "host-4",
             image: "academy_image_4",
             title: "요리 배우기",
@@ -465,12 +513,25 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: ["uid1","uid1"],
+            qna: [
+                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+            ],
+            notice: [
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
             ]
         ),
 
         // Academy 5
         GodLifeModel(
-            academyUID: "academy-5",
+            godLifeUID: "academy-5",
             hostUID: "host-5",
             image: "academy_image_5",
             title: "사진 촬영 기초",
@@ -538,12 +599,34 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "총무"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: [],
+            qna: [
+                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+            ],
+            notice: [
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내", notice: "김총무입니다. 다음달부터 회원권을 20프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내 2", notice: "김총무입니다. 다음달부터 회원권을 30프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내 3", notice: "김총무입니다. 다음달부터 회원권을 40프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.02", writerUID: "uid1"),
             ]
         ),
 
         // Academy 6
         GodLifeModel(
-            academyUID: "academy-6",
+            godLifeUID: "academy-6",
             hostUID: "host-6",
             image: "academy_image_6",
             title: "피아노 레슨",
@@ -611,12 +694,30 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "총무"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: [],
+            qna: [
+                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+            ],
+            notice: [
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.03.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내", notice: "김총무입니다. 다음달부터 회원권을 20프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.02.03", writerUID: "uid1"),
             ]
         ),
 
         // Academy 7
         GodLifeModel(
-            academyUID: "academy-7",
+            godLifeUID: "academy-7",
             hostUID: "host-7",
             image: "academy_image_7",
             title: "드로잉 클래스",
@@ -684,6 +785,21 @@ extension GodLifeModel {
                     ],
                     date: "2022.02.02"
                 ),
+            ],
+            members: [
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "방장"),
+                MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
+            ],
+            userRequest: ["uid1","uid1","uid1","uid1"],
+            qna: [
+                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+            ],
+            notice: [
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.04.02", writerUID: "uid1"),
+                GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "회원권 인상안내", notice: "김총무입니다. 다음달부터 회원권을 20프로 인상할 예정입니다. 인상사유는 금리 인상으로 불가피하게 인상하게 되었음을 알려드립ㄴ디ㅏ.", date: "2022.04.01", writerUID: "uid1"),
             ]
         )
     ]

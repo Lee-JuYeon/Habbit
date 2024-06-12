@@ -335,6 +335,21 @@
 			path = GodLifeMake;
 			sourceTree = "<group>";
 		};
+		7E34B9902C1969800030D589 /* GodLife */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F2BA12C0C342E0035535B /* ReviewModel.swift */,
+				7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */,
+				7E34B9552C121CE20030D589 /* CareerModel.swift */,
+				7E34B9862C18C0100030D589 /* ActivityModel.swift */,
+				7E34B9882C18C0930030D589 /* QnAModel.swift */,
+				7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */,
+				7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */,
+				7E34B98E2C18C48C0030D589 /* MembersModel.swift */,
+			);
+			path = GodLife;
+			sourceTree = "<group>";
+		};
 		7E5F2B512C095C560035535B = {
 			isa = PBXGroup;
 			children = (
@@ -484,16 +499,9 @@
 		7E5F2B9E2C0C34100035535B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9902C1969800030D589 /* GodLife */,
 				7E5F2B9F2C0C341C0035535B /* UserModel.swift */,
-				7E5F2BA12C0C342E0035535B /* ReviewModel.swift */,
-				7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */,
 				7E34B94C2C10821D0030D589 /* NotificationModel.swift */,
-				7E34B9552C121CE20030D589 /* CareerModel.swift */,
-				7E34B9862C18C0100030D589 /* ActivityModel.swift */,
-				7E34B9882C18C0930030D589 /* QnAModel.swift */,
-				7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */,
-				7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */,
-				7E34B98E2C18C48C0030D589 /* MembersModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
