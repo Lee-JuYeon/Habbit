@@ -30,8 +30,7 @@ struct SheetAcademyFilter: View {
             HStack(alignment : VerticalAlignment.center){
                 Text("위치")
                 
-                //map
-                mapView()
+                
                 
             }
            

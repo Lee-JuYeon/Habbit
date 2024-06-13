@@ -26,7 +26,7 @@ struct CustomBottomSheet<Content: View>: View {
 
     var body: some View {
         if isOpen {
-            Color.gray.opacity(0.1)
+            Color.gray.opacity(0.3)
                 .onTapGesture {
                     withAnimation {
                         isOpen = false

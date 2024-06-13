@@ -227,7 +227,6 @@
 		7E34B9472C0F17F90030D589 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F2BA92C0C3AAA0035535B /* AppleMap.swift */,
 				7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */,
 			);
 			path = Sheet;
@@ -362,6 +361,14 @@
 			path = QnAview;
 			sourceTree = "<group>";
 		};
+		7E34B9982C1B47DF0030D589 /* AppleMapView */ = {
+			isa = PBXGroup;
+			children = (
+				7E5F2BA92C0C3AAA0035535B /* AppleMap.swift */,
+			);
+			path = AppleMapView;
+			sourceTree = "<group>";
+		};
 		7E5F2B512C095C560035535B = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +456,7 @@
 		7E5F2B8A2C095DD20035535B /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9982C1B47DF0030D589 /* AppleMapView */,
 				7E34B95D2C12E3290030D589 /* FoldableListView */,
 				7E34B95A2C12E0710030D589 /* SocialView */,
 				7E34B9572C12DFEE0030D589 /* SelfieView */,
