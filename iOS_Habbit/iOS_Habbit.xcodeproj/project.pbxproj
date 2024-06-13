@@ -41,6 +41,8 @@
 		7E34B98B2C18C0A90030D589 /* ActivityImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */; };
 		7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */; };
 		7E34B98F2C18C48C0030D589 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98E2C18C48C0030D589 /* MembersModel.swift */; };
+		7E34B9942C1A10780030D589 /* GodLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9932C1A10780030D589 /* GodLifeView.swift */; };
+		7E34B9972C1A11100030D589 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9962C1A11100030D589 /* QnAView.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -60,7 +62,6 @@
 		7E5F2BA42C0C343F0035535B /* GodLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */; };
 		7E5F2BA82C0C34650035535B /* GodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA72C0C34650035535B /* GodLifeCell.swift */; };
 		7E5F2BAA2C0C3AAA0035535B /* GodLifeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */; };
-		7E5F2BAC2C0C3AB70035535B /* GodLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BAB2C0C3AB70035535B /* GodLifeView.swift */; };
 		7E5F2BB12C0C72340035535B /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB02C0C72340035535B /* DropDownView.swift */; };
 		7E5F2BB42C0C88DF0035535B /* RecyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB32C0C88DF0035535B /* RecyclerView.swift */; };
 		7E5F2BB72C0CAB010035535B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB62C0CAB010035535B /* ImagePicker.swift */; };
@@ -118,6 +119,8 @@
 		7E34B98A2C18C0A90030D589 /* ActivityImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityImageModel.swift; sourceTree = "<group>"; };
 		7E34B98C2C18C2E50030D589 /* GodLifeNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeNotification.swift; sourceTree = "<group>"; };
 		7E34B98E2C18C48C0030D589 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
+		7E34B9932C1A10780030D589 /* GodLifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GodLifeView.swift; sourceTree = "<group>"; };
+		7E34B9962C1A11100030D589 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -141,7 +144,6 @@
 		7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeModel.swift; sourceTree = "<group>"; };
 		7E5F2BA72C0C34650035535B /* GodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeCell.swift; sourceTree = "<group>"; };
 		7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeHeader.swift; sourceTree = "<group>"; };
-		7E5F2BAB2C0C3AB70035535B /* GodLifeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeView.swift; sourceTree = "<group>"; };
 		7E5F2BB02C0C72340035535B /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		7E5F2BB32C0C88DF0035535B /* RecyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerView.swift; sourceTree = "<group>"; };
 		7E5F2BB62C0CAB010035535B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		7E34B9472C0F17F90030D589 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */,
 				7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */,
 			);
 			path = Sheet;
@@ -319,6 +322,7 @@
 		7E34B9822C182DAB0030D589 /* GodLifeDetail */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9952C1A10FD0030D589 /* QnAview */,
 				7E34B97A2C16358E0030D589 /* HostView */,
 				7E34B9762C15FE740030D589 /* ActivityListView */,
 				7E34B9752C15FE560030D589 /* ReviewListView */,
@@ -338,8 +342,8 @@
 		7E34B9902C1969800030D589 /* GodLife */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F2BA12C0C342E0035535B /* ReviewModel.swift */,
 				7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */,
+				7E5F2BA12C0C342E0035535B /* ReviewModel.swift */,
 				7E34B9552C121CE20030D589 /* CareerModel.swift */,
 				7E34B9862C18C0100030D589 /* ActivityModel.swift */,
 				7E34B9882C18C0930030D589 /* QnAModel.swift */,
@@ -348,6 +352,14 @@
 				7E34B98E2C18C48C0030D589 /* MembersModel.swift */,
 			);
 			path = GodLife;
+			sourceTree = "<group>";
+		};
+		7E34B9952C1A10FD0030D589 /* QnAview */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B9962C1A11100030D589 /* QnAView.swift */,
+			);
+			path = QnAview;
 			sourceTree = "<group>";
 		};
 		7E5F2B512C095C560035535B = {
@@ -509,9 +521,8 @@
 		7E5F2BA52C0C34520035535B /* GodLife */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9932C1A10780030D589 /* GodLifeView.swift */,
 				7E5F2BA72C0C34650035535B /* GodLifeCell.swift */,
-				7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */,
-				7E5F2BAB2C0C3AB70035535B /* GodLifeView.swift */,
 			);
 			path = GodLife;
 			sourceTree = "<group>";
@@ -692,6 +703,8 @@
 				7E34B9492C0F18090030D589 /* GodLifeDetail.swift in Sources */,
 				7E5F2B912C09B0F50035535B /* CustomTabItemModel.swift in Sources */,
 				7E34B93A2C0D872D0030D589 /* TopRoundedRectangle.swift in Sources */,
+				7E34B9942C1A10780030D589 /* GodLifeView.swift in Sources */,
+				7E34B9972C1A11100030D589 /* QnAView.swift in Sources */,
 				7E34B9812C177CD90030D589 /* ScreenVM.swift in Sources */,
 				7E5F2BA42C0C343F0035535B /* GodLifeModel.swift in Sources */,
 				7E5F2BA82C0C34650035535B /* GodLifeCell.swift in Sources */,
@@ -716,7 +729,6 @@
 				7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */,
 				7E34B9502C1151AD0030D589 /* SafariView.swift in Sources */,
 				7E34B9872C18C0100030D589 /* ActivityModel.swift in Sources */,
-				7E5F2BAC2C0C3AB70035535B /* GodLifeView.swift in Sources */,
 				7E5F2BA22C0C342E0035535B /* ReviewModel.swift in Sources */,
 				7E5F2B9B2C0ACFB40035535B /* Color.swift in Sources */,
 				7E34B9522C118ACB0030D589 /* NotificationView.swift in Sources */,

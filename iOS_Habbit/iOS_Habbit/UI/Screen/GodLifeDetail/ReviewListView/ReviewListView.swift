@@ -13,7 +13,7 @@ struct ReviewListView: View {
     
     var body: some View {
         VStack(alignment : HorizontalAlignment.leading){
-            Text("리뷰")
+            Text("후기")
                 .font(.system(size: 30))
                 .fontWeight(.bold)
             ScrollView(.horizontal, showsIndicators: false){

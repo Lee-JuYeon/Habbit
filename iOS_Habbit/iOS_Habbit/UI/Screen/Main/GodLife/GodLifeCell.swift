@@ -57,7 +57,7 @@ struct GodLifeCell : View {
                         .fontWeight(.bold)
                     Text(getModel?.type ?? "")
                         .font(.title3)
-                    Text("📍 \(String(describing: getModel?.location ?? ""))")
+                    Text("📍 \(String(describing: getModel?.location ?? ["":""]))")
                         .font(.title3)
                     Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
                 }

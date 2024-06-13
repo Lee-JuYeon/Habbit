@@ -90,7 +90,7 @@ struct GodLifeDetail : View {
                         VStack(
                             alignment:HorizontalAlignment.leading
                         ){
-                            Text("📍 \(screenVM.currentGodLifeModel?.location ?? "")")
+                            Text("📍 \(screenVM.currentGodLifeModel?.location ?? ["":""])")
                                 .font(.system(size: 20))
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             Text("💵 \(monthlyPayConverter(pay: screenVM.currentGodLifeModel?.monthlyPay))")
@@ -105,11 +105,15 @@ struct GodLifeDetail : View {
                     HostView(setUserModel: UserModel.jiwonModel)
                     
                     // 리뷰 뷰
-                    ReviewListView(setList: GodLifeModel.dummyList.first?.reviewList ?? [])
+                    ReviewListView(setList: screenVM.currentGodLifeModel?.reviewList ?? [])
                     
                     // 활동 뷰
-                    ActivityListView(setList: GodLifeModel.dummyList.first?.activityList ?? [] )
+                    ActivityListView(setList: screenVM.currentGodLifeModel?.activityList ?? [] )
                     
+                    // QnA
+                    QnAView(setList: screenVM.currentGodLifeModel?.qna ?? [])
+                    
+                    // 공지사항
                 }
             }
         }

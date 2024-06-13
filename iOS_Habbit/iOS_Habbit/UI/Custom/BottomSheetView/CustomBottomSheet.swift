@@ -32,6 +32,13 @@ struct CustomBottomSheet<Content: View>: View {
                         isOpen = false
                     }
                 }
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    minHeight: 0,
+                    maxHeight: .infinity
+                )
+                .edgesIgnoringSafeArea(.all)
                 .overlay {
                     GeometryReader { geometry in
                         VStack {
@@ -39,16 +46,21 @@ struct CustomBottomSheet<Content: View>: View {
                             VStack {
                                 self.getContent
                             }
-                            .background(BlurView(style: .light))
-                            .frame(
-                                minWidth: 0,
-                                maxWidth: .infinity,
-                                maxHeight: min(geometry.size.height - geometry.safeAreaInsets.top, geometry.size.height * 0.9),
-                                alignment: .top
+                            .padding(
+                                EdgeInsets(top: 10, leading: 5, bottom: 0, trailing: 5)
                             )
+                            .background(BlurView(style: .light))
                             .clipShape(TopRoundedRectangle(
                                 radius: 20,
                                 corners: [.topLeft, .topRight])
+                            )
+                            .frame(
+                                minWidth: 0,
+                                maxWidth: .infinity,
+                                minHeight: 0,
+                                maxHeight: min(geometry.size.height - geometry.safeAreaInsets.top, geometry.size.height * 0.9),
+//                                maxHeight: .infinity,
+                                alignment: .bottom
                             )
                             .transition(.move(edge: .bottom))
                             .offset(y: max(offset, 0))
@@ -81,6 +93,9 @@ struct CustomBottomSheet<Content: View>: View {
                                     isDragging = false
                                 }
                         )
+                        .onDisappear(perform: {
+                            offset = 0
+                        })
                     }
                 }
         }
