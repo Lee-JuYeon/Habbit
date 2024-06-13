@@ -6,24 +6,16 @@
 //
 
 import SwiftUI
-import MapKit
 
 struct SheetAcademyFilter: View {
-    
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(
-            latitude: 37.5666791, 
-            longitude: 126.9782914
-        ),
-        span: MKCoordinateSpan(
-            latitudeDelta: 0.5,
-            longitudeDelta: 0.5
-        )
-    )
+
 
     
     var body: some View {
-        VStack {
+        VStack(alignment : HorizontalAlignment.center) {
+            Text("조건 검색")
+                .font(.system(size: 20))
+                .fontWeight(.bold)
             /* 필터링 요소
              이미지
              모임 타이틀
@@ -60,16 +52,6 @@ struct SheetAcademyFilter: View {
         )
     }
     
-    private func mapView() -> some View {
-        return Map(
-            coordinateRegion: $region,
-            showsUserLocation: true,
-            userTrackingMode: .constant(.follow)
-        )
-        .frame(
-            width: 200,
-            height: 200
-        )
-    }
+   
 }
 

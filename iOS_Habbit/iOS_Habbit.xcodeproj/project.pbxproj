@@ -61,7 +61,7 @@
 		7E5F2BA22C0C342E0035535B /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA12C0C342E0035535B /* ReviewModel.swift */; };
 		7E5F2BA42C0C343F0035535B /* GodLifeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */; };
 		7E5F2BA82C0C34650035535B /* GodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA72C0C34650035535B /* GodLifeCell.swift */; };
-		7E5F2BAA2C0C3AAA0035535B /* GodLifeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */; };
+		7E5F2BAA2C0C3AAA0035535B /* AppleMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BA92C0C3AAA0035535B /* AppleMap.swift */; };
 		7E5F2BB12C0C72340035535B /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB02C0C72340035535B /* DropDownView.swift */; };
 		7E5F2BB42C0C88DF0035535B /* RecyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB32C0C88DF0035535B /* RecyclerView.swift */; };
 		7E5F2BB72C0CAB010035535B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2BB62C0CAB010035535B /* ImagePicker.swift */; };
@@ -143,7 +143,7 @@
 		7E5F2BA12C0C342E0035535B /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		7E5F2BA32C0C343F0035535B /* GodLifeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeModel.swift; sourceTree = "<group>"; };
 		7E5F2BA72C0C34650035535B /* GodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeCell.swift; sourceTree = "<group>"; };
-		7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeHeader.swift; sourceTree = "<group>"; };
+		7E5F2BA92C0C3AAA0035535B /* AppleMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMap.swift; sourceTree = "<group>"; };
 		7E5F2BB02C0C72340035535B /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		7E5F2BB32C0C88DF0035535B /* RecyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclerView.swift; sourceTree = "<group>"; };
 		7E5F2BB62C0CAB010035535B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		7E34B9472C0F17F90030D589 /* Sheet */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F2BA92C0C3AAA0035535B /* GodLifeHeader.swift */,
+				7E5F2BA92C0C3AAA0035535B /* AppleMap.swift */,
 				7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */,
 			);
 			path = Sheet;
@@ -739,7 +739,7 @@
 				7E34B97E2C1721B40030D589 /* CustomTabViewStyle.swift in Sources */,
 				7E34B9692C13320E0030D589 /* ProfileEditView.swift in Sources */,
 				7E34B9892C18C0930030D589 /* QnAModel.swift in Sources */,
-				7E5F2BAA2C0C3AAA0035535B /* GodLifeHeader.swift in Sources */,
+				7E5F2BAA2C0C3AAA0035535B /* AppleMap.swift in Sources */,
 				7E34B97C2C16359D0030D589 /* HostView.swift in Sources */,
 				7E5F2BA02C0C341C0035535B /* UserModel.swift in Sources */,
 				7E34B9592C12E0030030D589 /* SelfieView.swift in Sources */,
