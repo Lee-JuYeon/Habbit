@@ -11,7 +11,7 @@
 		7E34B93A2C0D872D0030D589 /* TopRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9392C0D872D0030D589 /* TopRoundedRectangle.swift */; };
 		7E34B93D2C0D89450030D589 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B93C2C0D89450030D589 /* BlurView.swift */; };
 		7E34B9412C0D9EEE0030D589 /* NeomorphhismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9402C0D9EEE0030D589 /* NeomorphhismView.swift */; };
-		7E34B9432C0DBECC0030D589 /* CustomBottomSheetVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9422C0DBECC0030D589 /* CustomBottomSheetVM.swift */; };
+		7E34B9432C0DBECC0030D589 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9422C0DBECC0030D589 /* ScreenType.swift */; };
 		7E34B9452C0DC5370030D589 /* CustomBottomSheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */; };
 		7E34B9492C0F18090030D589 /* GodLifeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9482C0F18090030D589 /* GodLifeDetail.swift */; };
 		7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */; };
@@ -43,6 +43,7 @@
 		7E34B98F2C18C48C0030D589 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98E2C18C48C0030D589 /* MembersModel.swift */; };
 		7E34B9942C1A10780030D589 /* GodLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9932C1A10780030D589 /* GodLifeView.swift */; };
 		7E34B9972C1A11100030D589 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9962C1A11100030D589 /* QnAView.swift */; };
+		7E34B99A2C1B48700030D589 /* ManageGodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9992C1B48700030D589 /* ManageGodLifeCell.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -89,7 +90,7 @@
 		7E34B9392C0D872D0030D589 /* TopRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedRectangle.swift; sourceTree = "<group>"; };
 		7E34B93C2C0D89450030D589 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		7E34B9402C0D9EEE0030D589 /* NeomorphhismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphhismView.swift; sourceTree = "<group>"; };
-		7E34B9422C0DBECC0030D589 /* CustomBottomSheetVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetVM.swift; sourceTree = "<group>"; };
+		7E34B9422C0DBECC0030D589 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
 		7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetType.swift; sourceTree = "<group>"; };
 		7E34B9482C0F18090030D589 /* GodLifeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeDetail.swift; sourceTree = "<group>"; };
 		7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAcademyFilter.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		7E34B98E2C18C48C0030D589 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
 		7E34B9932C1A10780030D589 /* GodLifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GodLifeView.swift; sourceTree = "<group>"; };
 		7E34B9962C1A11100030D589 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
+		7E34B9992C1B48700030D589 /* ManageGodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageGodLifeCell.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -178,8 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				7E34B9362C0D81730030D589 /* CustomBottomSheet.swift */,
-				7E34B9422C0DBECC0030D589 /* CustomBottomSheetVM.swift */,
-				7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */,
 			);
 			path = BottomSheetView;
 			sourceTree = "<group>";
@@ -220,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				7E5F2B982C0ACEC90035535B /* ManageView.swift */,
+				7E34B9992C1B48700030D589 /* ManageGodLifeCell.swift */,
 			);
 			path = Manage;
 			sourceTree = "<group>";
@@ -369,6 +370,15 @@
 			path = AppleMapView;
 			sourceTree = "<group>";
 		};
+		7E34B99B2C1B4AC00030D589 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				7E34B9422C0DBECC0030D589 /* ScreenType.swift */,
+				7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		7E5F2B512C095C560035535B = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +402,7 @@
 		7E5F2B5C2C095C560035535B /* iOS_Habbit */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B99B2C1B4AC00030D589 /* Types */,
 				7E34B97F2C177CC70030D589 /* VM */,
 				7E34B93E2C0D9EC00030D589 /* Util */,
 				7E5F2B9E2C0C34100035535B /* Models */,
@@ -724,8 +735,9 @@
 				7E34B95C2C12E07F0030D589 /* SocialView.swift in Sources */,
 				7E34B9672C1331AB0030D589 /* ProfileView.swift in Sources */,
 				7E5F2B602C095C560035535B /* MainView.swift in Sources */,
-				7E34B9432C0DBECC0030D589 /* CustomBottomSheetVM.swift in Sources */,
+				7E34B9432C0DBECC0030D589 /* ScreenType.swift in Sources */,
 				7E34B9722C147DF90030D589 /* AuthVM.swift in Sources */,
+				7E34B99A2C1B48700030D589 /* ManageGodLifeCell.swift in Sources */,
 				7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */,
 				7E5F2B952C09B13F0035535B /* CustomTabView.swift in Sources */,
 				7E34B9372C0D81730030D589 /* CustomBottomSheet.swift in Sources */,

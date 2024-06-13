@@ -10,8 +10,6 @@ import SwiftUI
 
 struct SettingsView : View {
     
-    @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
-    
     var body : some View {
         ScrollView(
             Axis.Set.vertical

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
 
-    @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
+   
     @EnvironmentObject private var screenVM : ScreenVM
         
     var body: some View {
@@ -25,10 +25,10 @@ struct MainView: View {
                 mainView()
             }
             
-            CustomBottomSheet(isOpen: $bottomSheetVM.sheetVisible) {
-                switch(bottomSheetVM.sheetType){
-                    
-                    case .AdademyFilter :
+           
+            CustomBottomSheet(isOpen: $screenVM.sheetVisible) {
+                switch(screenVM.sheetType){
+                    case .GodLifeCell :
                         SheetAcademyFilter()
                 }
             }

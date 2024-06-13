@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ManageView : View {
     
-    @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
     @EnvironmentObject private var screenVM : ScreenVM
     
     private let titleSize : CGFloat = 30
@@ -25,7 +24,7 @@ struct ManageView : View {
                     .padding(10)
                
                 ForEach(GodLifeModel.dummyList, id: \.self){ model in
-                    GodLifeCell(setModel: model) { cellModel in
+                    ManageGodLifeCell(setModel: model) { cellModel in
                             // cellModel
                         screenVM.screenType = .GodLife_Edit
                         screenVM.currentGodLifeModel = cellModel

@@ -10,7 +10,6 @@ import SwiftUI
 
 struct GodLifeView : View {
     
-    @EnvironmentObject private var bottomSheetVM : CustomBottomSheetVM
     @EnvironmentObject private var screenVM : ScreenVM
     
     @State private var dataList : [GodLifeModel] = GodLifeModel.dummyList
@@ -81,8 +80,8 @@ struct GodLifeView : View {
                    .onTapGesture {
                        withAnimation {
                            withAnimation {
-                               bottomSheetVM.sheetType = .AdademyFilter
-                               bottomSheetVM.sheetVisible.toggle()
+                               screenVM.sheetType = .GodLifeCell
+                               screenVM.sheetVisible.toggle()
                            }
                        }
                    }
