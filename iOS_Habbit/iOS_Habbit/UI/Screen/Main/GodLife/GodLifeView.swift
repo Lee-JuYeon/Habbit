@@ -16,7 +16,6 @@ struct GodLifeView : View {
     @State private var filterString = ""
     
     var body : some View {
-        
         VStack{
             headerView()
             
@@ -25,7 +24,6 @@ struct GodLifeView : View {
             ) {
                 ForEach(textfiledFilter(list: dataList), id:\.self){ model in
                     GodLifeCell(setModel: model) { cellModel in
-                            // cellModel
                         screenVM.screenType = .GodLife_Detail
                         screenVM.currentGodLifeModel = cellModel
                     }
@@ -38,6 +36,9 @@ struct GodLifeView : View {
             maxWidth: .infinity,
             alignment: .center
         )
+        .bottomSheet(isOpen: $screenVM.sheetVisible, setContent: {
+            SheetAcademyFilter()
+        })
     }
     
     private func headerView() -> some View {
@@ -102,3 +103,10 @@ struct GodLifeView : View {
         }
     }
 }
+
+
+/*
+ 
+ public func fullScreenCover<Content>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View where Content : View
+ 
+ */

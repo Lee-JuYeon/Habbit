@@ -14,6 +14,10 @@ struct MainView: View {
         
     var body: some View {
         ZStack{
+//            NavigationView {
+//                mainView()
+//                    
+//            }
             switch(screenVM.screenType){
             case .MainView :
                 mainView()
@@ -26,12 +30,12 @@ struct MainView: View {
             }
             
            
-            CustomBottomSheet(isOpen: $screenVM.sheetVisible) {
-                switch(screenVM.sheetType){
-                    case .GodLifeCell :
-                        SheetAcademyFilter()
-                }
-            }
+//            CustomBottomSheet(isOpen: $screenVM.sheetVisible) {
+//                switch(screenVM.sheetType){
+//                    case .GodLifeCell :
+//                        SheetAcademyFilter()
+//                }
+//            }
         }
     }
     

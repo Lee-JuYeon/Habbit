@@ -27,6 +27,7 @@ struct ManageView : View {
                     ManageGodLifeCell(setModel: model) { cellModel in
                             // cellModel
                         screenVM.screenType = .GodLife_Edit
+                        screenVM.pageIndex = 1
                         screenVM.currentGodLifeModel = cellModel
                     }
                 }
