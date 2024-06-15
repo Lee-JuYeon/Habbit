@@ -14,7 +14,7 @@ struct GodLifeView : View {
     
     @State private var dataList : [GodLifeModel] = GodLifeModel.dummyList
     @State private var filterString = ""
-    
+
     var body : some View {
         VStack{
             headerView()
@@ -24,21 +24,23 @@ struct GodLifeView : View {
             ) {
                 ForEach(textfiledFilter(list: dataList), id:\.self){ model in
                     GodLifeCell(setModel: model) { cellModel in
-                        screenVM.screenType = .GodLife_Detail
-                        screenVM.currentGodLifeModel = cellModel
+//                        screenVM.screenType = .GodLife_Detail
+//                        screenVM.currentGodLifeModel = cellModel
                     }
+                   
                 }
             }
         }
+        .bottomSheet(isOpen: $screenVM.sheetVisible, setContent: {
+            SheetAcademyFilter()
+        })
         .background(Color.colourBackground)
         .frame(
             minWidth: 0,
             maxWidth: .infinity,
             alignment: .center
         )
-        .bottomSheet(isOpen: $screenVM.sheetVisible, setContent: {
-            SheetAcademyFilter()
-        })
+        
     }
     
     private func headerView() -> some View {

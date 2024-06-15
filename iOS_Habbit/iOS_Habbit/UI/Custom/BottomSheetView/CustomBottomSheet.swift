@@ -25,85 +25,103 @@ struct CustomBottomSheet<GetView: View>: ViewModifier {
     @State private var isDragging = false
 
     @ViewBuilder private func bottomSheetUI() -> some View {
-        if isOpen {
-            Color.gray.opacity(0.3)
+        ZStack{
+            Color.gray.opacity(0.01)
+                .edgesIgnoringSafeArea(.all)
                 .onTapGesture {
                     withAnimation {
                         isOpen = false
                     }
                 }
-                .frame(
-                    width: UIScreen.main.bounds.width,
-                    height: UIScreen.main.bounds.height
-                )
-                .edgesIgnoringSafeArea(.all)
-                .overlay {
-                    GeometryReader { geometry in
-                        VStack {
-                            Spacer()
-                            VStack {
-                                self.getContent
-                            }
-                            .padding(
-                                EdgeInsets(top: 10, leading: 5, bottom: 0, trailing: 5)
-                            )
-                            .background(BlurView(style: .light))
-                            .clipShape(TopRoundedRectangle(
-                                radius: 20,
-                                corners: [.topLeft, .topRight])
-                            )
-                            .frame(
-                                minWidth: 0,
-                                maxWidth: .infinity,
-                                minHeight: 0,
-                                maxHeight: min(geometry.size.height - geometry.safeAreaInsets.top, geometry.size.height * 0.9),
-//                                maxHeight: .infinity,
-                                alignment: .bottom
-                            )
-                            .transition(.move(edge: .bottom))
-                            .offset(y: max(offset, 0))
-                            .animation(isDragging ? .none : .easeInOut, value: offset) // Apply animation based on dragging state
-                        }
-                        .padding(
-                            EdgeInsets(top: 0, leading: 5, bottom: 50, trailing: 5)
-                        )
-                        .gesture(
-                            DragGesture()
-                                .updating($translation) { value, state, _ in
-                                    state = value.translation.height
-                                }
-                                .onChanged { value in
-                                    if value.translation.height > 0 {
-                                        offset = value.translation.height
-                                        isDragging = true
-                                    }
-                                }
-                                .onEnded { value in
-                                    if offset > geometry.size.height / 3 {
-                                        withAnimation {
-                                            isOpen = false
-                                        }
-                                    } else {
-                                        withAnimation {
-                                            offset = 0
-                                        }
-                                    }
-                                    isDragging = false
-                                }
-                        )
-                        .onDisappear(perform: {
-                            offset = 0
-                        })
+           
+            GeometryReader { geometry in
+                VStack {
+                    Spacer()
+                    VStack {
+                        self.getContent
                     }
+                    .padding(
+                        EdgeInsets(top: 10, leading: 5, bottom: 0, trailing: 5)
+                    )
+                    .background(Color.clear)
+                    .clipShape(TopRoundedRectangle(radius: 20, corners: [.topLeft, .topRight]))
+                    .overlay(
+                        TopRoundedRectangle(radius: 20, corners: [.topLeft, .topRight])
+                            .stroke(Color.black, lineWidth: 0.5)
+                    )
+                    .frame(
+                        minWidth: 0,
+                        maxWidth: .infinity,
+                        minHeight: 0,
+                        maxHeight: min(geometry.size.height - geometry.safeAreaInsets.top, geometry.size.height * 0.9),
+//                                maxHeight: .infinity,
+                        alignment: .bottom
+                    )
+                    .transition(.move(edge: .bottom))
+                    .offset(y: max(offset, 0))
+                    .animation(isDragging ? .none : .easeInOut, value: offset) // Apply animation based on dragging state
                 }
+                
+                
+                .padding(
+                    EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+                )
+                .gesture(
+                    DragGesture()
+                        .updating($translation) { value, state, _ in
+                            state = value.translation.height
+                        }
+                        .onChanged { value in
+                            if value.translation.height > 0 {
+                                offset = value.translation.height
+                                isDragging = true
+                            }
+                        }
+                        .onEnded { value in
+                            if offset > geometry.size.height / 3 {
+                                withAnimation {
+                                    isOpen = false
+                                }
+                            } else {
+                                withAnimation {
+                                    offset = 0
+                                }
+                            }
+                            isDragging = false
+                        }
+                )
+                .onDisappear(perform: {
+                    offset = 0
+                })
+            }
         }
+        .background(BackgroundBlurView())
     }
     
     func body(content : Content) -> some View {
-        content.overlay(bottomSheetUI())
+        content
+            .fullScreenCover(
+                isPresented: $isOpen,
+                content: {
+                    bottomSheetUI()
+                }
+            )
     }
     
 }
+
+struct BackgroundBlurView: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIView {
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        DispatchQueue.main.async {
+            view.superview?.superview?.backgroundColor = .clear
+        }
+        return view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+}
+
 
 extension View {
     func bottomSheet<GetView: View>(

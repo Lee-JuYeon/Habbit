@@ -13,30 +13,18 @@ struct MainView: View {
     @EnvironmentObject private var screenVM : ScreenVM
         
     var body: some View {
-        ZStack{
-//            NavigationView {
-//                mainView()
-//                    
-//            }
-            switch(screenVM.screenType){
-            case .MainView :
-                mainView()
-            case .GodLife_Detail :
-                GodLifeDetail()
-            case .GodLife_Make :
-                GodLifeMake()
-            default :
-                mainView()
-            }
-            
-           
-//            CustomBottomSheet(isOpen: $screenVM.sheetVisible) {
-//                switch(screenVM.sheetType){
-//                    case .GodLifeCell :
-//                        SheetAcademyFilter()
-//                }
-//            }
+        switch(screenVM.screenType){
+        case .MainView :
+            mainView()
+        case .GodLife_Detail :
+            GodLifeDetail()
+        case .GodLife_Make :
+            GodLifeMake()
+        default :
+            mainView()
         }
+        
+       
     }
     
     private func mainView() -> some View {
