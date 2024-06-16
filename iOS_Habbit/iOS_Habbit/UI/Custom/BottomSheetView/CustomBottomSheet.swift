@@ -95,7 +95,11 @@ struct CustomBottomSheet<GetView: View>: ViewModifier {
                 })
             }
         }
-        .background(BackgroundBlurView())
+        .background(
+            BackgroundBlurView()
+                .edgesIgnoringSafeArea(.all)
+        )
+        
     }
     
     func body(content : Content) -> some View {
