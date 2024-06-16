@@ -9,11 +9,24 @@ import SwiftUI
 
 struct CustomTabView<Content: View>: View {
     
+    enum CustomTabViewStyle {
+        case BottomNavigation
+        case TabView
+    }
+    
+    
+    struct CustomTabItemModel : Hashable{
+        let image: String
+        let title: String
+    }
+    
     private var getTabItemModels: [CustomTabItemModel]
     private var getTabViewStyle: CustomTabViewStyle
     private var getTabBackgroundColour : Color
     @Binding var getSelectedIndex: Int
     @ViewBuilder private let getContent: (Int) -> Content
+
+    @State private var currentTitle : String = ""
 
     init(
         setTabViewStyle: CustomTabViewStyle,
@@ -32,14 +45,18 @@ struct CustomTabView<Content: View>: View {
     @Environment(\.colorScheme) private var scheme
     var body: some View {
         GeometryReader{ geo in
-            let screenWidth = geo.size.width
-            let screenHeight = geo.size.height
             VStack(
                 alignment : HorizontalAlignment.center,
                 spacing: 0
             ) {
-                TabScreenView(geo: geo)
-                TabNavigationView(geo: geo)
+                switch(getTabViewStyle){
+                case .BottomNavigation :
+                    TabScreenView(geo: geo)
+                    TabNavigationView(geo: geo)
+                case .TabView :
+                    TabNavigationView(geo: geo)
+                    TabScreenView(geo: geo)
+                }
             }
             .background(.clear)
         }
@@ -51,32 +68,53 @@ struct CustomTabView<Content: View>: View {
             .frame(
                 height: (geo.size.height / 20) * 19
             )
+            .onAppear {
+                currentTitle = getTabItemModels.first?.title ?? ""
+            }
     }
     
     private func TabNavigationView(geo : GeometryProxy) -> some View {
-        return VStack{
-            Rectangle()
-                .fill()
-                .background(.black)
-                .frame(
-                    width: UIScreen.main.bounds.width,
-                    height: 1
-                )
-            LazyHStack(
-                alignment : VerticalAlignment.center,
-                content: {
-                    ForEach(getTabItemModels, id: \.self) { model in
-                        
-//                        if let index = getTabItemModels.firstIndex( where: { $0.title == clickedItemTitle }) {
-//                            getSelectedIndex = index
-//                        } else {
-//                            getSelectedIndex = 0
-//                        }
-                        
-                        TabItemView(setTitle: model.title, setImage: model.image)
-                   }
+        return VStack(alignment : HorizontalAlignment.center, spacing: 0){
+            switch(getTabViewStyle){
+            case .BottomNavigation :
+                Rectangle()
+                    .fill()
+                    .background(.black)
+                    .frame(
+                        width: UIScreen.main.bounds.width,
+                        height: 1
+                    )
+                ScrollView(.horizontal, showsIndicators: false){
+                    LazyHStack(
+                        alignment : VerticalAlignment.center,
+                        spacing: 0,
+                        content: {
+                            ForEach(getTabItemModels, id: \.self) { model in
+                                TabItemView(setModel: model)
+                           }
+                        }
+                    )
                 }
-            )
+            case .TabView :
+                ScrollView(.horizontal, showsIndicators: false){
+                    LazyHStack(
+                        alignment : VerticalAlignment.center,
+                        spacing: 0,
+                        content: {
+                            ForEach(getTabItemModels, id: \.self) { model in
+                                TabItemView(setModel: model)
+                           }
+                        }
+                    )
+                }
+                Rectangle()
+                    .fill()
+                    .background(.black)
+                    .frame(
+                        width: UIScreen.main.bounds.width,
+                        height: 1
+                    )
+            }
         }
         .background(getTabBackgroundColour)
         .frame(
@@ -85,10 +123,30 @@ struct CustomTabView<Content: View>: View {
         )
     }
     
-    private func TabItemView(setTitle getTitle : String, setImage getImage : String) -> some View {
-        return VStack(alignment : HorizontalAlignment.center){
-            Text(getTitle)
+    private func TabItemView(setModel getModel : CustomTabItemModel) -> some View {
+        return VStack(alignment : HorizontalAlignment.center, spacing: 0){
+            Image(getModel.image)
+                .resizable()
+                .renderingMode(.template)
+                .scaledToFit()
+                .foregroundColor(getModel.title == currentTitle ? (scheme == .dark ? Color.white : Color.black) : Color.gray)
+            
+            Text(getModel.title)
+                .foregroundColor(getModel.title == currentTitle ? (scheme == .dark ? Color.white : Color.black) : Color.gray)
+                .fontWeight(getModel.title == currentTitle ? .bold : .light)
+               
         }
+        .onTapGesture {
+            currentTitle = getModel.title
+            if let index = getTabItemModels.firstIndex( where: { $0.title == getModel.title }) {
+                getSelectedIndex = index
+            } else {
+                getSelectedIndex = 0
+            }
+        }
+        .frame(
+            width: UIScreen.main.bounds.width / CGFloat(getTabItemModels.count)
+        )
     }
    
 //    var body: some View {

@@ -29,12 +29,12 @@ struct MainView: View {
     
     private func mainView() -> some View {
         return CustomTabView(
-            setTabViewStyle: .BottomNavigation,
+            setTabViewStyle: CustomTabView.CustomTabViewStyle.BottomNavigation,
             setTabBackgroundColour: .backgroundColour,
             setTabItemModels: [
-                CustomTabItemModel(image: "image_up", title: "갓생"),
-                CustomTabItemModel(image: "image_cards", title: "관리"),
-                CustomTabItemModel(image: "image_profile", title: "프로필"),
+                CustomTabView.CustomTabItemModel(image: "image_up", title: "갓생"),
+                CustomTabView.CustomTabItemModel(image: "image_cards", title: "관리"),
+                CustomTabView.CustomTabItemModel(image: "image_profile", title: "프로필"),
             ],
             setSelectedIndex: $screenVM.pageIndex) { page in
                 switch(page) {

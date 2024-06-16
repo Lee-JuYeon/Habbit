@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct CustomTabItemModel : Hashable{
-    let image: String
-    let title: String
-}
+//struct CustomTabItemModel : Hashable{
+//    let image: String
+//    let title: String
+//}
 
 
 
