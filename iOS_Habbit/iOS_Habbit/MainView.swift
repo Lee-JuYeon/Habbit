@@ -13,18 +13,7 @@ struct MainView: View {
     @EnvironmentObject private var screenVM : ScreenVM
         
     var body: some View {
-        switch(screenVM.screenType){
-        case .MainView :
-            mainView()
-        case .GodLife_Detail :
-            GodLifeDetail()
-        case .GodLife_Make :
-            GodLifeMake()
-        default :
-            mainView()
-        }
-        
-       
+        mainView()
     }
     
     private func mainView() -> some View {

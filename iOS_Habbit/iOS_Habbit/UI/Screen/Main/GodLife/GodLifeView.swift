@@ -14,7 +14,10 @@ struct GodLifeView : View {
     
     @State private var dataList : [GodLifeModel] = GodLifeModel.dummyList
     @State private var filterString = ""
-
+    @State private var isVisibleGodLifeMake = false
+    @State private var isVisibleGodLifeDetail = false
+    
+    @State private var godLifeModel : GodLifeModel? = nil
     var body : some View {
         VStack{
             headerView()
@@ -24,12 +27,18 @@ struct GodLifeView : View {
             ) {
                 ForEach(textfiledFilter(list: dataList), id:\.self){ model in
                     GodLifeCell(setModel: model) { cellModel in
-//                        screenVM.screenType = .GodLife_Detail
-//                        screenVM.currentGodLifeModel = cellModel
+                        godLifeModel = cellModel
+                        isVisibleGodLifeDetail.toggle()
                     }
                    
                 }
             }
+        }
+        .fullScreenCover(isPresented: $isVisibleGodLifeDetail){
+            GodLifeDetail(setVisibleView: $isVisibleGodLifeDetail, setGodLifeModel: $godLifeModel)
+        }
+        .fullScreenCover(isPresented: $isVisibleGodLifeMake){
+            GodLifeMake(setVisibleView: $isVisibleGodLifeMake)
         }
         .bottomSheet(isOpen: $screenVM.sheetVisible, setContent: {
             SheetAcademyFilter()
@@ -70,7 +79,7 @@ struct GodLifeView : View {
                         height: 30
                    )
                    .onTapGesture {
-                       screenVM.screenType = .GodLife_Make
+                       isVisibleGodLifeMake.toggle()
                    }
                
                // 필터링
@@ -105,10 +114,3 @@ struct GodLifeView : View {
         }
     }
 }
-
-
-/*
- 
- public func fullScreenCover<Content>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View where Content : View
- 
- */

@@ -9,7 +9,19 @@ import SwiftUI
 
 struct GodLifeDetail : View {
     
-    @EnvironmentObject private var screenVM : ScreenVM
+    @Binding private var getVisibleView : Bool
+    @Binding private var getModel : GodLifeModel?
+    init(
+        setVisibleView : Binding<Bool>,
+        setGodLifeModel : Binding<GodLifeModel?>
+    ){
+        self._getVisibleView = setVisibleView
+        self._getModel = setGodLifeModel
+    }
+    
+    
+    
+    
     
     private func monthlyPayConverter(pay : Double?) -> String {
         return switch(pay){
@@ -31,8 +43,7 @@ struct GodLifeDetail : View {
                     .frame(width: 25, height: 25)
                     .onTapGesture {
                         // 뒤로가기
-                        screenVM.screenType = .MainView
-                        screenVM.currentGodLifeModel = nil
+                        getVisibleView.toggle()
                     }
                 
                 // 가입 버튼
@@ -66,7 +77,7 @@ struct GodLifeDetail : View {
                     alignment : HorizontalAlignment.center
                 ) {
                     ScrollView(.horizontal, showsIndicators: false){
-                        Text(screenVM.currentGodLifeModel?.title ?? "")
+                        Text(getModel?.title ?? "")
                             .font(.system(size: 30))
                             .fontWeight(.bold)
                     }
@@ -76,7 +87,7 @@ struct GodLifeDetail : View {
                     ){
                         // 취미 이미지
                         AsyncImage(
-                            url: URL(string: screenVM.currentGodLifeModel?.image ?? "")
+                            url: URL(string: getModel?.image ?? "")
                         ) { image in
                             image
                                 .resizable()
@@ -90,13 +101,13 @@ struct GodLifeDetail : View {
                         VStack(
                             alignment:HorizontalAlignment.leading
                         ){
-                            Text("📍 \(screenVM.currentGodLifeModel?.location ?? ["":""])")
+                            Text("📍 \(getModel?.location ?? ["":""])")
                                 .font(.system(size: 20))
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            Text("💵 \(monthlyPayConverter(pay: screenVM.currentGodLifeModel?.monthlyPay))")
+                            Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
                                 .font(.system(size: 20))
                                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            Text(screenVM.currentGodLifeModel?.explain ?? "")
+                            Text(getModel?.explain ?? "")
                                 .font(.system(size: 20))
                         }//VStack
                     }//HStaack
@@ -105,13 +116,13 @@ struct GodLifeDetail : View {
                     HostView(setUserModel: UserModel.jiwonModel)
                     
                     // 리뷰 뷰
-                    ReviewListView(setList: screenVM.currentGodLifeModel?.reviewList ?? [])
+                    ReviewListView(setList: getModel?.reviewList ?? [])
                     
                     // 활동 뷰
-                    ActivityListView(setList: screenVM.currentGodLifeModel?.activityList ?? [] )
+                    ActivityListView(setList: getModel?.activityList ?? [] )
                     
                     // QnA
-                    QnAView(setList: screenVM.currentGodLifeModel?.qna ?? [])
+                    QnAView(setList: getModel?.qna ?? [])
                     
                     // 공지사항
                 }

@@ -43,7 +43,7 @@
 		7E34B98F2C18C48C0030D589 /* MembersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B98E2C18C48C0030D589 /* MembersModel.swift */; };
 		7E34B9942C1A10780030D589 /* GodLifeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9932C1A10780030D589 /* GodLifeView.swift */; };
 		7E34B9972C1A11100030D589 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9962C1A11100030D589 /* QnAView.swift */; };
-		7E34B99A2C1B48700030D589 /* ManageGodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9992C1B48700030D589 /* ManageGodLifeCell.swift */; };
+		7E34B99A2C1B48700030D589 /* CreatedGodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9992C1B48700030D589 /* CreatedGodLifeCell.swift */; };
 		7E5F2B5E2C095C560035535B /* iOS_HabbitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */; };
 		7E5F2B602C095C560035535B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B5F2C095C560035535B /* MainView.swift */; };
 		7E5F2B622C095C570035535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5F2B612C095C570035535B /* Assets.xcassets */; };
@@ -122,7 +122,7 @@
 		7E34B98E2C18C48C0030D589 /* MembersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersModel.swift; sourceTree = "<group>"; };
 		7E34B9932C1A10780030D589 /* GodLifeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GodLifeView.swift; sourceTree = "<group>"; };
 		7E34B9962C1A11100030D589 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
-		7E34B9992C1B48700030D589 /* ManageGodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageGodLifeCell.swift; sourceTree = "<group>"; };
+		7E34B9992C1B48700030D589 /* CreatedGodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedGodLifeCell.swift; sourceTree = "<group>"; };
 		7E5F2B5A2C095C560035535B /* iOS_Habbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Habbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B5D2C095C560035535B /* iOS_HabbitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitApp.swift; sourceTree = "<group>"; };
 		7E5F2B5F2C095C560035535B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -220,7 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				7E5F2B982C0ACEC90035535B /* ManageView.swift */,
-				7E34B9992C1B48700030D589 /* ManageGodLifeCell.swift */,
+				7E34B9992C1B48700030D589 /* CreatedGodLifeCell.swift */,
+				7E34B9422C0DBECC0030D589 /* ExampleView.swift */,
 			);
 			path = Manage;
 			sourceTree = "<group>";
@@ -373,7 +374,10 @@
 		7E34B99B2C1B4AC00030D589 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				7E34B9422C0DBECC0030D589 /* ExampleView.swift */,
+				7E5F2B902C09B0F50035535B /* CustomTabItemModel.swift */,
+				7E5F2B922C09B1290035535B /* CustomTabBottom.swift */,
+				7E5F2B962C09C2340035535B /* CustomTabBottomItem.swift */,
+				7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */,
 				7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */,
 			);
 			path = Example;
@@ -457,8 +461,6 @@
 			isa = PBXGroup;
 			children = (
 				7E34B9792C16356B0030D589 /* Main */,
-				7E34B9822C182DAB0030D589 /* GodLifeDetail */,
-				7E34B9832C1842140030D589 /* GodLifeMake */,
 				7E34B9472C0F17F90030D589 /* Sheet */,
 			);
 			path = Screen;
@@ -519,10 +521,6 @@
 			isa = PBXGroup;
 			children = (
 				7E5F2B942C09B13F0035535B /* CustomTabView.swift */,
-				7E5F2B902C09B0F50035535B /* CustomTabItemModel.swift */,
-				7E5F2B922C09B1290035535B /* CustomTabBottom.swift */,
-				7E5F2B962C09C2340035535B /* CustomTabBottomItem.swift */,
-				7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */,
 			);
 			path = CustomTabView;
 			sourceTree = "<group>";
@@ -540,6 +538,8 @@
 		7E5F2BA52C0C34520035535B /* GodLife */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9822C182DAB0030D589 /* GodLifeDetail */,
+				7E34B9832C1842140030D589 /* GodLifeMake */,
 				7E34B9932C1A10780030D589 /* GodLifeView.swift */,
 				7E5F2BA72C0C34650035535B /* GodLifeCell.swift */,
 			);
@@ -737,7 +737,7 @@
 				7E5F2B602C095C560035535B /* MainView.swift in Sources */,
 				7E34B9432C0DBECC0030D589 /* ExampleView.swift in Sources */,
 				7E34B9722C147DF90030D589 /* AuthVM.swift in Sources */,
-				7E34B99A2C1B48700030D589 /* ManageGodLifeCell.swift in Sources */,
+				7E34B99A2C1B48700030D589 /* CreatedGodLifeCell.swift in Sources */,
 				7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */,
 				7E5F2B952C09B13F0035535B /* CustomTabView.swift in Sources */,
 				7E34B9372C0D81730030D589 /* CustomBottomSheet.swift in Sources */,

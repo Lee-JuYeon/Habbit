@@ -9,6 +9,14 @@ import SwiftUI
 
 struct GodLifeMake: View {
     
+    @Binding private var getVisibleView : Bool
+    init(
+        setVisibleView : Binding<Bool>
+    ){
+        self._getVisibleView = setVisibleView
+    }
+    
+    
     @State private var text: String = ""
     @EnvironmentObject private var screenVM : ScreenVM
     
@@ -23,7 +31,7 @@ struct GodLifeMake: View {
                         height: 25
                     )
                     .onTapGesture {
-                        screenVM.screenType = .MainView
+                        getVisibleView.toggle()
                     }
                 
                 Text("저장하기")
@@ -251,6 +259,3 @@ struct GodLifeMake: View {
     
 }
 
-#Preview {
-    GodLifeMake()
-}

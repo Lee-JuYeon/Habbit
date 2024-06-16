@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ManageGodLifeCell : View {
+struct CreatedGodLifeCell : View {
     
     private var getModel : GodLifeModel? = nil
     private var onClick : (GodLifeModel) -> ()

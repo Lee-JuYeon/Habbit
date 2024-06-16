@@ -17,34 +17,8 @@ struct ManageView : View {
             Axis.Set.vertical
         ){
             LazyVStack(alignment : HorizontalAlignment.leading){
-                Text("내가 개설한 갓생")
-                    .padding(10)
-                    .font(.system(size: titleSize))
-                    .fontWeight(.bold)
-                    .padding(10)
-               
-                ForEach(GodLifeModel.dummyList, id: \.self){ model in
-                    ManageGodLifeCell(setModel: model) { cellModel in
-                            // cellModel
-                        screenVM.screenType = .GodLife_Edit
-                        screenVM.pageIndex = 1
-                        screenVM.currentGodLifeModel = cellModel
-                    }
-                }
-                
-                Text("내가 가입한 갓생")
-                    .padding(10)
-                    .font(.system(size: titleSize))
-                    .fontWeight(.bold)
-                    .padding(10)
-                
-                ForEach(GodLifeModel.dummyList, id: \.self){ model in
-                    GodLifeCell(setModel: model) { cellModel in
-                            // cellModel
-                        screenVM.screenType = .GodLife_Exit
-                        screenVM.currentGodLifeModel = cellModel
-                    }
-                }
+                createdGodLifeRoom()
+                joinedGodLifeRoom()
             }
         }
         .background(Color.colourBackground)
@@ -57,6 +31,73 @@ struct ManageView : View {
         )
     }
     
+    
+    @State var isCreatedSectionOpen = true
+    private func createdGodLifeRoom() -> some View {
+        let mList = GodLifeModel.dummyList
+        return VStack(alignment: HorizontalAlignment.leading){
+            HStack(alignment: VerticalAlignment.center){
+                Text("내가 개설한 갓생")
+                    .padding(10)
+                    .font(.system(size: titleSize))
+                    .fontWeight(.bold)
+                    .padding(10)
+                Image(isCreatedSectionOpen ? "image_arrow_up" : "image_arrow_down")
+                    .resizable()
+                    .renderingMode(.template)
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+            }
+            .onTapGesture {
+                isCreatedSectionOpen.toggle()
+            }
+            
+           
+            if isCreatedSectionOpen {
+                ForEach(mList, id: \.self){ model in
+                    CreatedGodLifeCell(setModel: model) { cellModel in
+                            // cellModel
+                        screenVM.screenType = .GodLife_Edit
+                        screenVM.pageIndex = 1
+                        screenVM.currentGodLifeModel = cellModel
+                    }
+                }
+            }
+        }
+    }
+    
+    @State var isJoinedSectionOpen = true
+    private func joinedGodLifeRoom() -> some View {
+        let mList = GodLifeModel.dummyList
+        return VStack(alignment: HorizontalAlignment.leading){
+            HStack(alignment: VerticalAlignment.center){
+                Text("내가 가입한 갓생")
+                    .padding(10)
+                    .font(.system(size: titleSize))
+                    .fontWeight(.bold)
+                    .padding(10)
+                Image(isJoinedSectionOpen ? "image_arrow_up" : "image_arrow_down")
+                    .resizable()
+                    .renderingMode(.template)
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+            }
+            .onTapGesture {
+                isJoinedSectionOpen.toggle()
+            }
+            
+           
+            if isJoinedSectionOpen {
+                ForEach(mList, id: \.self){ model in
+                    GodLifeCell(setModel: model) { cellModel in
+                            // cellModel
+                        screenVM.screenType = .GodLife_Exit
+                        screenVM.currentGodLifeModel = cellModel
+                    }
+                }
+            }
+        }
+    }
    
 }
 
