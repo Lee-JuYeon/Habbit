@@ -1,24 +1,20 @@
 //
-//  AcademyCell.swift
+//  CustomBottomSheetVM.swift
 //  iOS_Habbit
 //
-//  Created by C.A.V.S.S on 6/2/24.
+//  Created by C.A.V.S.S on 6/3/24.
 //
 
 import SwiftUI
 
-struct GodLifeCell : View {
-    
+struct JoinedGodLifeCell: View {
     private var getModel : GodLifeModel? = nil
     private var onClick : (GodLifeModel) -> ()
-    private var getCellType : CellType = .Main
     init(
         setModel : GodLifeModel,
-        setCellType : CellType,
         onClick : @escaping (GodLifeModel) -> ()
     ){
         self.getModel = setModel
-        self.getCellType = setCellType
         self.onClick = onClick
     }
     
@@ -33,12 +29,6 @@ struct GodLifeCell : View {
         default :
             String(format: "%.0f", pay ?? "무료") + "원"
         }
-    }
-    
-    enum CellType {
-        case Main
-        case Created
-        case Joined
     }
 
     var body : some View {
@@ -69,8 +59,7 @@ struct GodLifeCell : View {
                         .font(.title3)
                     Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
                     
-                
-                    if getModel?.userRequest.count ?? 0 > 0 && getCellType == .Created {
+                    if getModel?.userRequest.count ?? 0 > 0 {
                         Text("가입 요청 \(getModel?.userRequest.count ?? 0)건")
                             .font(.title3)
                             .padding(5)
@@ -83,21 +72,20 @@ struct GodLifeCell : View {
                     }
                 }
             }
-            .overlay {
-                if getModel?.adminChecked == false{
-                    ZStack(alignment : .center){
-                        Color.gray.opacity(0.8)
-                            .frame(
-                                minWidth: 0,
-                                maxWidth: .infinity,
-                                minHeight: 0,
-                                maxHeight: .infinity
-                            )
-                        
-                        Text("개설 승낙을 기다리는 중입니다...")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                    }
+            
+            if getModel?.adminChecked == false{
+                ZStack(alignment : .center){
+                    Color.gray.opacity(0.8)
+                        .frame(
+                            minWidth: 0,
+                            maxWidth: .infinity,
+                            minHeight: 0,
+                            maxHeight: .infinity
+                        )
+                    
+                    Text("개설 승낙을 기다리는 중입니다...")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
                 }
             }
         }

@@ -11,7 +11,7 @@
 		7E34B93A2C0D872D0030D589 /* TopRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9392C0D872D0030D589 /* TopRoundedRectangle.swift */; };
 		7E34B93D2C0D89450030D589 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B93C2C0D89450030D589 /* BlurView.swift */; };
 		7E34B9412C0D9EEE0030D589 /* NeomorphhismView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9402C0D9EEE0030D589 /* NeomorphhismView.swift */; };
-		7E34B9432C0DBECC0030D589 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9422C0DBECC0030D589 /* ExampleView.swift */; };
+		7E34B9432C0DBECC0030D589 /* JoinedGodLifeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9422C0DBECC0030D589 /* JoinedGodLifeCell.swift */; };
 		7E34B9452C0DC5370030D589 /* CustomBottomSheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */; };
 		7E34B9492C0F18090030D589 /* GodLifeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B9482C0F18090030D589 /* GodLifeDetail.swift */; };
 		7E34B94B2C0F183C0030D589 /* SheetAcademyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */; };
@@ -90,7 +90,7 @@
 		7E34B9392C0D872D0030D589 /* TopRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRoundedRectangle.swift; sourceTree = "<group>"; };
 		7E34B93C2C0D89450030D589 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		7E34B9402C0D9EEE0030D589 /* NeomorphhismView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeomorphhismView.swift; sourceTree = "<group>"; };
-		7E34B9422C0DBECC0030D589 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		7E34B9422C0DBECC0030D589 /* JoinedGodLifeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinedGodLifeCell.swift; sourceTree = "<group>"; };
 		7E34B9442C0DC5370030D589 /* CustomBottomSheetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheetType.swift; sourceTree = "<group>"; };
 		7E34B9482C0F18090030D589 /* GodLifeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodLifeDetail.swift; sourceTree = "<group>"; };
 		7E34B94A2C0F183C0030D589 /* SheetAcademyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAcademyFilter.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 			children = (
 				7E5F2B982C0ACEC90035535B /* ManageView.swift */,
 				7E34B9992C1B48700030D589 /* CreatedGodLifeCell.swift */,
-				7E34B9422C0DBECC0030D589 /* ExampleView.swift */,
+				7E34B9422C0DBECC0030D589 /* JoinedGodLifeCell.swift */,
 			);
 			path = Manage;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 				7E34B95C2C12E07F0030D589 /* SocialView.swift in Sources */,
 				7E34B9672C1331AB0030D589 /* ProfileView.swift in Sources */,
 				7E5F2B602C095C560035535B /* MainView.swift in Sources */,
-				7E34B9432C0DBECC0030D589 /* ExampleView.swift in Sources */,
+				7E34B9432C0DBECC0030D589 /* JoinedGodLifeCell.swift in Sources */,
 				7E34B9722C147DF90030D589 /* AuthVM.swift in Sources */,
 				7E34B99A2C1B48700030D589 /* CreatedGodLifeCell.swift in Sources */,
 				7E34B98D2C18C2E50030D589 /* GodLifeNotification.swift in Sources */,

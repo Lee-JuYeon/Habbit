@@ -13,12 +13,12 @@ struct ManageView : View {
     
     private let titleSize : CGFloat = 30
     var body : some View {
-        ScrollView(
-            Axis.Set.vertical
-        ){
-            LazyVStack(alignment : HorizontalAlignment.leading){
-                createdGodLifeRoom()
-                joinedGodLifeRoom()
+        GeometryReader { geo in
+            ScrollView(.vertical, showsIndicators: false){
+                LazyVStack(alignment : HorizontalAlignment.leading){
+                    createdGodLifeRoom(setGeo: geo)
+                    joinedGodLifeRoom(setGeo: geo)
+                }
             }
         }
         .background(Color.colourBackground)
@@ -33,12 +33,11 @@ struct ManageView : View {
     
     
     @State var isCreatedSectionOpen = true
-    private func createdGodLifeRoom() -> some View {
+    private func createdGodLifeRoom(setGeo getGeo : GeometryProxy) -> some View {
         let mList = GodLifeModel.dummyList
-        return VStack(alignment: HorizontalAlignment.leading){
+        return LazyVStack(alignment: HorizontalAlignment.leading){
             HStack(alignment: VerticalAlignment.center){
                 Text("내가 개설한 갓생")
-                    .padding(10)
                     .font(.system(size: titleSize))
                     .fontWeight(.bold)
                     .padding(10)
@@ -52,10 +51,21 @@ struct ManageView : View {
                 isCreatedSectionOpen.toggle()
             }
             
-           
             if isCreatedSectionOpen {
+//                ScrollView(.vertical, showsIndicators: false){
+//                    LazyVStack(alignment : HorizontalAlignment.leading, spacing: 0){
+//                        ForEach(mList, id: \.self){ model in
+//                            GodLifeCell(setModel: model, setCellType: .Created) { cellModel in
+//                                    // cellModel
+//                                screenVM.screenType = .GodLife_Edit
+//                                screenVM.pageIndex = 1
+//                                screenVM.currentGodLifeModel = cellModel
+//                            }
+//                        }
+//                    }
+//                }
                 ForEach(mList, id: \.self){ model in
-                    CreatedGodLifeCell(setModel: model) { cellModel in
+                    GodLifeCell(setModel: model, setCellType: .Created) { cellModel in
                             // cellModel
                         screenVM.screenType = .GodLife_Edit
                         screenVM.pageIndex = 1
@@ -64,15 +74,18 @@ struct ManageView : View {
                 }
             }
         }
+//        .frame(
+//            minHeight: 0,
+//            maxHeight: getGeo.size.height / 2
+//        )
     }
     
     @State var isJoinedSectionOpen = true
-    private func joinedGodLifeRoom() -> some View {
+    private func joinedGodLifeRoom(setGeo getGeo : GeometryProxy) -> some View {
         let mList = GodLifeModel.dummyList
-        return VStack(alignment: HorizontalAlignment.leading){
+        return LazyVStack(alignment: HorizontalAlignment.leading){
             HStack(alignment: VerticalAlignment.center){
                 Text("내가 가입한 갓생")
-                    .padding(10)
                     .font(.system(size: titleSize))
                     .fontWeight(.bold)
                     .padding(10)
@@ -88,8 +101,19 @@ struct ManageView : View {
             
            
             if isJoinedSectionOpen {
+//                ScrollView(.vertical, showsIndicators: false){
+//                    LazyVStack(alignment : HorizontalAlignment.leading, spacing: 0){
+//                        ForEach(mList, id: \.self){ model in
+//                            GodLifeCell(setModel: model, setCellType: .Joined) { cellModel in
+//                                    // cellModel
+//                                screenVM.screenType = .GodLife_Exit
+//                                screenVM.currentGodLifeModel = cellModel
+//                            }
+//                        }
+//                    }
+//                }
                 ForEach(mList, id: \.self){ model in
-                    GodLifeCell(setModel: model) { cellModel in
+                    GodLifeCell(setModel: model, setCellType: .Joined) { cellModel in
                             // cellModel
                         screenVM.screenType = .GodLife_Exit
                         screenVM.currentGodLifeModel = cellModel

@@ -26,7 +26,7 @@ struct GodLifeView : View {
                 setAxis: RecyclerViewAxis.VERTICAL
             ) {
                 ForEach(textfiledFilter(list: dataList), id:\.self){ model in
-                    GodLifeCell(setModel: model) { cellModel in
+                    GodLifeCell(setModel: model, setCellType: .Main) { cellModel in
                         godLifeModel = cellModel
                         isVisibleGodLifeDetail.toggle()
                     }
