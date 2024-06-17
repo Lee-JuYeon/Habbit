@@ -52,18 +52,6 @@ struct ManageView : View {
             }
             
             if isCreatedSectionOpen {
-//                ScrollView(.vertical, showsIndicators: false){
-//                    LazyVStack(alignment : HorizontalAlignment.leading, spacing: 0){
-//                        ForEach(mList, id: \.self){ model in
-//                            GodLifeCell(setModel: model, setCellType: .Created) { cellModel in
-//                                    // cellModel
-//                                screenVM.screenType = .GodLife_Edit
-//                                screenVM.pageIndex = 1
-//                                screenVM.currentGodLifeModel = cellModel
-//                            }
-//                        }
-//                    }
-//                }
                 ForEach(mList, id: \.self){ model in
                     GodLifeCell(setModel: model, setCellType: .Created) { cellModel in
                             // cellModel
@@ -74,10 +62,6 @@ struct ManageView : View {
                 }
             }
         }
-//        .frame(
-//            minHeight: 0,
-//            maxHeight: getGeo.size.height / 2
-//        )
     }
     
     @State var isJoinedSectionOpen = true
@@ -101,17 +85,6 @@ struct ManageView : View {
             
            
             if isJoinedSectionOpen {
-//                ScrollView(.vertical, showsIndicators: false){
-//                    LazyVStack(alignment : HorizontalAlignment.leading, spacing: 0){
-//                        ForEach(mList, id: \.self){ model in
-//                            GodLifeCell(setModel: model, setCellType: .Joined) { cellModel in
-//                                    // cellModel
-//                                screenVM.screenType = .GodLife_Exit
-//                                screenVM.currentGodLifeModel = cellModel
-//                            }
-//                        }
-//                    }
-//                }
                 ForEach(mList, id: \.self){ model in
                     GodLifeCell(setModel: model, setCellType: .Joined) { cellModel in
                             // cellModel

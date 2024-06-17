@@ -51,7 +51,7 @@
 		7E5F2B702C095C570035535B /* iOS_HabbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B6F2C095C570035535B /* iOS_HabbitTests.swift */; };
 		7E5F2B7A2C095C580035535B /* iOS_HabbitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B792C095C580035535B /* iOS_HabbitUITests.swift */; };
 		7E5F2B7C2C095C580035535B /* iOS_HabbitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B7B2C095C580035535B /* iOS_HabbitUITestsLaunchTests.swift */; };
-		7E5F2B912C09B0F50035535B /* CustomTabItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B902C09B0F50035535B /* CustomTabItemModel.swift */; };
+		7E5F2B912C09B0F50035535B /* DataVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B902C09B0F50035535B /* DataVM.swift */; };
 		7E5F2B932C09B1290035535B /* CustomTabBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B922C09B1290035535B /* CustomTabBottom.swift */; };
 		7E5F2B952C09B13F0035535B /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B942C09B13F0035535B /* CustomTabView.swift */; };
 		7E5F2B972C09C2340035535B /* CustomTabBottomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5F2B962C09C2340035535B /* CustomTabBottomItem.swift */; };
@@ -134,7 +134,7 @@
 		7E5F2B752C095C580035535B /* iOS_HabbitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_HabbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5F2B792C095C580035535B /* iOS_HabbitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitUITests.swift; sourceTree = "<group>"; };
 		7E5F2B7B2C095C580035535B /* iOS_HabbitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_HabbitUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7E5F2B902C09B0F50035535B /* CustomTabItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabItemModel.swift; sourceTree = "<group>"; };
+		7E5F2B902C09B0F50035535B /* DataVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVM.swift; sourceTree = "<group>"; };
 		7E5F2B922C09B1290035535B /* CustomTabBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBottom.swift; sourceTree = "<group>"; };
 		7E5F2B942C09B13F0035535B /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		7E5F2B962C09C2340035535B /* CustomTabBottomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBottomItem.swift; sourceTree = "<group>"; };
@@ -315,6 +315,7 @@
 		7E34B97F2C177CC70030D589 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				7E5F2B902C09B0F50035535B /* DataVM.swift */,
 				7E34B9802C177CD90030D589 /* ScreenVM.swift */,
 			);
 			path = VM;
@@ -374,7 +375,6 @@
 		7E34B99B2C1B4AC00030D589 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				7E5F2B902C09B0F50035535B /* CustomTabItemModel.swift */,
 				7E5F2B922C09B1290035535B /* CustomTabBottom.swift */,
 				7E5F2B962C09C2340035535B /* CustomTabBottomItem.swift */,
 				7E34B97D2C1721B40030D589 /* CustomTabViewStyle.swift */,
@@ -720,7 +720,7 @@
 				7E5F2BB72C0CAB010035535B /* ImagePicker.swift in Sources */,
 				7E34B9852C184A240030D589 /* GodLifeMake.swift in Sources */,
 				7E34B9492C0F18090030D589 /* GodLifeDetail.swift in Sources */,
-				7E5F2B912C09B0F50035535B /* CustomTabItemModel.swift in Sources */,
+				7E5F2B912C09B0F50035535B /* DataVM.swift in Sources */,
 				7E34B93A2C0D872D0030D589 /* TopRoundedRectangle.swift in Sources */,
 				7E34B9942C1A10780030D589 /* GodLifeView.swift in Sources */,
 				7E34B9972C1A11100030D589 /* QnAView.swift in Sources */,
