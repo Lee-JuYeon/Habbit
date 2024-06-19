@@ -15,8 +15,8 @@ struct GodLifeModel : Hashable {
     let location : [String:String]
     let monthlyPay : Double?
     let explain : String
-    let reviewList : [ReviewModel]?
-    let likeList : [String]? // user uid list
+    let reviewList : [ReviewModel]
+    let likeList : [String] // user uid list
     let type : String? 
     let adminChecked : Bool
     let activityList : [ActivityModel]
@@ -30,6 +30,24 @@ struct GodLifeModel : Hashable {
 
 
 extension GodLifeModel {
+    static let guidModel : GodLifeModel = GodLifeModel(
+        godLifeUID: "갓생UID",
+        hostUID: "방장UID",
+        image: "",
+        title: "개설하시려는 갓생의 이름을 작성해주세요",
+        location: ["":""],
+        monthlyPay: 0.0,
+        explain: "개설하시려는 갓생의 내용을 작성해주세요",
+        reviewList: [],
+        likeList: [],
+        type: "IT, 문화 등 갓생의 타입을 설정해주세요",
+        adminChecked: false,
+        activityList: [],
+        members: [],
+        userRequest: [],
+        qna: [],
+        notice: []
+    )
     static let dummyList : [GodLifeModel] = [
         // Academy 1
         GodLifeModel(

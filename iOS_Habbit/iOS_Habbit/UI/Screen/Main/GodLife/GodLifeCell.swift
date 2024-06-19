@@ -84,7 +84,7 @@ struct GodLifeCell : View {
                 }
             }
             .overlay {
-                if getModel?.adminChecked == false{
+                if getModel?.adminChecked == false && getCellType == .Created{
                     ZStack(alignment : .center){
                         Color.gray.opacity(0.8)
                             .frame(

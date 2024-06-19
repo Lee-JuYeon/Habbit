@@ -60,7 +60,7 @@ struct ProfileView: View {
                                 LazyVStack(
                                     alignment : HorizontalAlignment.leading
                                 ){
-                                    Text(model.titie)
+                                    Text(model.title)
                                         .font(.system(size: 18))
                                         .lineLimit(1)
                                     Text(model.career)

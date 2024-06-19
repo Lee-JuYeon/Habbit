@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-//enum CustomTabViewStyle {
-//    case BottomNavigation
-//    case TabView
-//}
-
+enum GodLifeViewType {
+    case Read
+    case Update
+    case Create
+}

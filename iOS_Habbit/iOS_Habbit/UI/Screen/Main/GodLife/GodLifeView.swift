@@ -17,7 +17,7 @@ struct GodLifeView : View {
     @State private var isVisibleGodLifeMake = false
     @State private var isVisibleGodLifeDetail = false
     
-    @State private var godLifeModel : GodLifeModel? = nil
+    @State private var godLifeModel : GodLifeModel = GodLifeModel.dummyList.first!
     var body : some View {
         VStack{
             headerView()
@@ -35,10 +35,18 @@ struct GodLifeView : View {
             }
         }
         .fullScreenCover(isPresented: $isVisibleGodLifeDetail){
-            GodLifeDetail(setVisibleView: $isVisibleGodLifeDetail, setGodLifeModel: $godLifeModel)
+            GodLifeCRUD(
+                setVisibleView: $isVisibleGodLifeDetail,
+                setGodLifeModel: $godLifeModel,
+                setGodLifeViewType: GodLifeViewType.Read
+            )
         }
         .fullScreenCover(isPresented: $isVisibleGodLifeMake){
-            GodLifeMake(setVisibleView: $isVisibleGodLifeMake)
+            GodLifeCRUD(
+                setVisibleView: $isVisibleGodLifeMake,
+                setGodLifeModel: $godLifeModel,
+                setGodLifeViewType: GodLifeViewType.Create
+            )
         }
         .bottomSheet(isOpen: $screenVM.sheetVisible, setContent: {
             SheetAcademyFilter()

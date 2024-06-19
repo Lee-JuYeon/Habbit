@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ReviewListView: View {
     
-    let setList : [ReviewModel]
+    private var getList : [ReviewModel]
+    init(setList: [ReviewModel]) {
+        self.getList = setList
+    }
     
     var body: some View {
         VStack(alignment : HorizontalAlignment.leading){
@@ -18,7 +21,7 @@ struct ReviewListView: View {
                 .fontWeight(.bold)
             ScrollView(.horizontal, showsIndicators: false){
                 LazyHStack(alignment : VerticalAlignment.top){
-                    ForEach(setList ?? [], id: \.self){ model in
+                    ForEach(getList, id: \.self){ model in
                         // 리뷰 리스트 아이탬
                         item(model: model)
                     }// ForEach

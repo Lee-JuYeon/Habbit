@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct JoinedGodLifeCell: View {
+struct JoinedGodLifeView: View {
+    
+    @Binding private var isOpen : Bool
     private var getModel : GodLifeModel? = nil
-    private var onClick : (GodLifeModel) -> ()
     init(
         setModel : GodLifeModel,
-        onClick : @escaping (GodLifeModel) -> ()
+        setVisible : Binding<Bool>
     ){
         self.getModel = setModel
-        self.onClick = onClick
+        self._isOpen = setVisible
     }
     
     @EnvironmentObject private var screenVM : ScreenVM
@@ -91,7 +92,7 @@ struct JoinedGodLifeCell: View {
         }
         .onTapGesture {
             if getModel?.adminChecked == true{
-                onClick(getModel!)
+//                onClick(getModel!)
             }
         }
         .frame(maxHeight: 150)

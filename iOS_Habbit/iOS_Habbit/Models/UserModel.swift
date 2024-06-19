@@ -13,7 +13,7 @@ struct UserModel : Hashable {
     let userName : String
     let selfieVerify : Bool
     let userImage : String
-    let peerReview : [String]? 
+    let peerReview : [String]
     let socialMedia : [String:String] // insta, youtube
     let bio : String?
     let careers : [CareerModel]
@@ -21,6 +21,16 @@ struct UserModel : Hashable {
 
 
 extension UserModel {
+    static let guidModel = UserModel(
+        userUID: "유저UID",
+        userName: "이름을 입력해주세요",
+        selfieVerify: false,
+        userImage: "",
+        peerReview: [],
+        socialMedia: ["":""],
+        bio: "자기소개를 입력할 수 있습니다. 사진과 자기소개, 소셜미디어, 경력등은 갓생의 방장이 되는 경우에만 다른 사용자들에게 공개됩니다.",
+        careers: []
+    )
     static let jiwonModel = UserModel(
         userUID: "userUID1",
         userName: "김지원",

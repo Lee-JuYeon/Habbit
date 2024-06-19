@@ -32,7 +32,9 @@ struct ManageView : View {
     }
     
     
-    @State var isCreatedSectionOpen = true
+    @State var isUpdateSectionOpen = true
+    @State var isUpdateSheetOpen = false
+    @State var godLifeModel : GodLifeModel = GodLifeModel.dummyList.first!
     private func createdGodLifeRoom(setGeo getGeo : GeometryProxy) -> some View {
         let mList = GodLifeModel.dummyList
         return LazyVStack(alignment: HorizontalAlignment.leading){
@@ -41,33 +43,41 @@ struct ManageView : View {
                     .font(.system(size: titleSize))
                     .fontWeight(.bold)
                     .padding(10)
-                Image(isCreatedSectionOpen ? "image_arrow_up" : "image_arrow_down")
+                Image(isUpdateSectionOpen ? "image_arrow_up" : "image_arrow_down")
                     .resizable()
                     .renderingMode(.template)
                     .scaledToFit()
                     .frame(width: 30, height: 30)
             }
-            .onTapGesture {
-                isCreatedSectionOpen.toggle()
-            }
             
-            if isCreatedSectionOpen {
+            if isUpdateSectionOpen {
                 ForEach(mList, id: \.self){ model in
                     GodLifeCell(setModel: model, setCellType: .Created) { cellModel in
-                            // cellModel
-                        screenVM.screenType = .GodLife_Edit
-                        screenVM.pageIndex = 1
-                        screenVM.currentGodLifeModel = cellModel
+                        godLifeModel = cellModel
+                        isUpdateSheetOpen.toggle()
                     }
                 }
             }
         }
+        .onTapGesture {
+            isUpdateSectionOpen.toggle()
+        }
+        .fullScreenCover(isPresented: $isUpdateSheetOpen) {
+            GodLifeCRUD(
+                setVisibleView: $isUpdateSheetOpen,
+                setGodLifeModel: $godLifeModel,
+                setGodLifeViewType: .Update
+            )
+        }
     }
     
     @State var isJoinedSectionOpen = true
+    @State var isJoinedSheetOpen = false
     private func joinedGodLifeRoom(setGeo getGeo : GeometryProxy) -> some View {
-        let mList = GodLifeModel.dummyList
-        return LazyVStack(alignment: HorizontalAlignment.leading){
+        let mList = GodLifeModel.dummyList.filter { model in
+            model.adminChecked == true
+        }
+        return VStack(alignment: HorizontalAlignment.leading){
             HStack(alignment: VerticalAlignment.center){
                 Text("내가 가입한 갓생")
                     .font(.system(size: titleSize))
@@ -79,23 +89,24 @@ struct ManageView : View {
                     .scaledToFit()
                     .frame(width: 30, height: 30)
             }
-            .onTapGesture {
-                isJoinedSectionOpen.toggle()
-            }
-            
            
             if isJoinedSectionOpen {
                 ForEach(mList, id: \.self){ model in
                     GodLifeCell(setModel: model, setCellType: .Joined) { cellModel in
-                            // cellModel
-                        screenVM.screenType = .GodLife_Exit
-                        screenVM.currentGodLifeModel = cellModel
+                        godLifeModel = cellModel
+                        isJoinedSheetOpen.toggle()
                     }
                 }
             }
         }
+        .onTapGesture {
+            print("asdfasdf")
+            isJoinedSectionOpen.toggle()
+        }
+        .bottomSheet(isOpen: $isJoinedSheetOpen) {
+            JoinedGodLifeView(setModel: godLifeModel, setVisible: $isJoinedSheetOpen)
+        }
     }
-   
 }
 
 

@@ -226,7 +226,7 @@ struct GodLifeMake: View {
     private func careerItem(model : CareerModel) -> some View {
         return VStack(alignment : HorizontalAlignment.leading){
             ZStack(alignment:.topTrailing){
-                Text(model.titie)
+                Text(model.title)
                     .font(.system(size: 20))
                     .fontWeight(.bold)
                     .frame(
