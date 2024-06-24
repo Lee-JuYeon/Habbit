@@ -30,7 +30,10 @@ struct GodLifeCRUD : View {
             GodLifeTopView(
                 setVisibleView: $getVisibleView,
                 setGodLifeViewType: getGodLifeViewType,
-                setDeleteGodLife: {
+                setHostExitGodLife: {
+                    
+                }, 
+                setMemberExitGodLife: {
                     
                 },
                 setJoinGodLife: {
@@ -72,6 +75,9 @@ struct GodLifeCRUD : View {
                 }
             }
         }
+        .onDisappear(perform: {
+            getVisibleView = false
+        })
         .padding(10)
         .background(Color.backgroundColour)
     }

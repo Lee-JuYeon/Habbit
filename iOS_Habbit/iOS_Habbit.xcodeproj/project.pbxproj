@@ -460,6 +460,8 @@
 		7E5F2B892C095DCD0035535B /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				7E34B9832C1842140030D589 /* GodLifeMake */,
+				7E34B9822C182DAB0030D589 /* GodLifeCRUD */,
 				7E34B9792C16356B0030D589 /* Main */,
 				7E34B9472C0F17F90030D589 /* Sheet */,
 			);
@@ -538,8 +540,6 @@
 		7E5F2BA52C0C34520035535B /* GodLife */ = {
 			isa = PBXGroup;
 			children = (
-				7E34B9822C182DAB0030D589 /* GodLifeCRUD */,
-				7E34B9832C1842140030D589 /* GodLifeMake */,
 				7E34B9932C1A10780030D589 /* GodLifeView.swift */,
 				7E5F2BA72C0C34650035535B /* GodLifeCell.swift */,
 			);
@@ -936,6 +936,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앱에서 이미지 저장을 위해 앨범 권한을 요청드립니다.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -974,6 +975,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앱에서 이미지 저장을 위해 앨범 권한을 요청드립니다.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

@@ -11,4 +11,5 @@ enum GodLifeViewType {
     case Read
     case Update
     case Create
+    case Joined
 }

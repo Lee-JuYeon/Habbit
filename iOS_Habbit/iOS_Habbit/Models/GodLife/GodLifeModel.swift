@@ -12,7 +12,7 @@ struct GodLifeModel : Hashable {
     let hostUID : String?
     let image : String?
     let title : String
-    let location : [String:String]
+    let location : [String:Double]
     let monthlyPay : Double?
     let explain : String
     let reviewList : [ReviewModel]
@@ -34,13 +34,13 @@ extension GodLifeModel {
         godLifeUID: "갓생UID",
         hostUID: "방장UID",
         image: "",
-        title: "개설하시려는 갓생의 이름을 작성해주세요",
-        location: ["":""],
+        title: "클릭하여 갓생 이름 설정",
+        location: ["":0.0],
         monthlyPay: 0.0,
-        explain: "개설하시려는 갓생의 내용을 작성해주세요",
+        explain: "클릭하여 갓생의 내용을 작성해주세요",
         reviewList: [],
         likeList: [],
-        type: "IT, 문화 등 갓생의 타입을 설정해주세요",
+        type: "클릭하여 IT, 문화 등 갓생의 타입을 설정해주세요",
         adminChecked: false,
         activityList: [],
         members: [],
@@ -55,7 +55,7 @@ extension GodLifeModel {
             hostUID: "host-1",
             image: "https://newsimg.sedaily.com/2023/11/08/29X5NVRFTF_1.jpg",
             title: "Python 프로그래밍 입문",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: 0,
             explain: "초보자를 위한 Python 프로그래밍 입문 모임입니다. 기본적인 문법부터 실습까지 배우고, 간단한 프로그램을 만들어 보세요.",
             reviewList: [
@@ -195,7 +195,7 @@ extension GodLifeModel {
             hostUID: "host-2",
             image: "https://pds.skyedaily.com/news_data2019/20201214123511_fbycyzdb.jpg",
             title: "수영 실력 향상",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: nil,
             explain: "수영 실력을 향상시키고 싶은 분들을 위한 모임입니다. 기본적인 자세와 스트로크부터 훈련까지, 전문 코치가 직접 지도해 드립니다.",
             reviewList: [
@@ -334,7 +334,7 @@ extension GodLifeModel {
             hostUID: "host-3",
             image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
             title: "영어 회화 실력 향상",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: 200000,
             explain: "영어 회화 실력을 향상시키고 싶은 분들을 위한 모임입니다. 외국인 강사와 함께 자연스럽게 영어 대화를 연습하고, 실생활에서 유용한 표현을 배우세요.",
             reviewList: [
@@ -467,7 +467,7 @@ extension GodLifeModel {
             hostUID: "host-4",
             image: "academy_image_4",
             title: "요리 배우기",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: 120000,
             explain: "집에서 맛있는 요리를 만들 수 있도록 다양한 요리 레시피를 배우는 모임입니다. 직접 만들어 먹는 재미를 느껴보세요.",
             reviewList: [
@@ -553,7 +553,7 @@ extension GodLifeModel {
             hostUID: "host-5",
             image: "academy_image_5",
             title: "사진 촬영 기초",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: 180000,
             explain: "사진 촬영 기초를 배우고 싶은 분들을 위한 모임입니다. 기본적인 카메라 설정부터 촬영 기술까지 배워보세요.",
             reviewList: [
@@ -648,7 +648,7 @@ extension GodLifeModel {
             hostUID: "host-6",
             image: "academy_image_6",
             title: "피아노 레슨",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: 220000,
             explain: "피아노를 처음 배우거나 실력을 향상시키고 싶은 분들을 위한 모임입니다. 개인 맞춤형 레슨을 통해 피아노 실력을 향상시켜보세요.",
             reviewList: [
@@ -739,7 +739,7 @@ extension GodLifeModel {
             hostUID: "host-7",
             image: "academy_image_7",
             title: "드로잉 클래스",
-            location: ["위도":"경도"],
+            location: ["위도":0.0],
             monthlyPay: 200000,
             explain: "드로잉 기초부터 고급 기술까지 배울 수 있는 모임입니다. 창의력을 키우고 싶은 분들에게 추천합니다.",
             reviewList: [

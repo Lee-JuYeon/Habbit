@@ -37,7 +37,7 @@ struct GodLifeCell : View {
     
     enum CellType {
         case Main
-        case Created
+        case Update
         case Joined
     }
 
@@ -65,12 +65,12 @@ struct GodLifeCell : View {
                         .fontWeight(.bold)
                     Text(getModel?.type ?? "")
                         .font(.title3)
-                    Text("📍 \(String(describing: getModel?.location ?? ["":""]))")
+                    Text("📍 \(String(describing: getModel?.location ?? ["":0.0]))")
                         .font(.title3)
                     Text("💵 \(monthlyPayConverter(pay: getModel?.monthlyPay))")
                     
                 
-                    if getModel?.userRequest.count ?? 0 > 0 && getCellType == .Created {
+                    if getModel?.userRequest.count ?? 0 > 0 && getCellType == .Update {
                         Text("가입 요청 \(getModel?.userRequest.count ?? 0)건")
                             .font(.title3)
                             .padding(5)
@@ -84,7 +84,7 @@ struct GodLifeCell : View {
                 }
             }
             .overlay {
-                if getModel?.adminChecked == false && getCellType == .Created{
+                if getModel?.adminChecked == false && getCellType == .Update{
                     ZStack(alignment : .center){
                         Color.gray.opacity(0.8)
                             .frame(
