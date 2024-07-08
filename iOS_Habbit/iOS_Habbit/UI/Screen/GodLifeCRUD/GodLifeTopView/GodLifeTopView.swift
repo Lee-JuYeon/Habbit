@@ -15,9 +15,11 @@ struct GodLifeTopView : View {
     private var getMemberExitGodLife : () -> Void
     private var getJoinGodLife : () -> Void
     private var getReportGodLife : (String) -> Void
+    private var getGodLifeModel : GodLifeModel
     init(
         setVisibleView: Binding<Bool>,
         setGodLifeViewType : GodLifeViewType,
+        setGodLifeModel : GodLifeModel,
         setHostExitGodLife : @escaping () -> Void,
         setMemberExitGodLife : @escaping () -> Void,
         setJoinGodLife : @escaping () -> Void,
@@ -25,6 +27,7 @@ struct GodLifeTopView : View {
     ) {
         self._getVisibleView = setVisibleView
         self.getViewType = setGodLifeViewType
+        self.getGodLifeModel = setGodLifeModel
         self.getHostExitGodLife = setHostExitGodLife
         self.getMemberExitGodLife = setMemberExitGodLife
         self.getJoinGodLife = setJoinGodLife
@@ -90,12 +93,13 @@ struct GodLifeTopView : View {
             .padding(5)
             
             
-            Rectangle()
-                .fill(Color.clear)
-                .frame(
-                    width: 25,
-                    height: 25
-                )
+            RequestListView(setModel: getGodLifeModel, setGodLifeViewType: getViewType)
+//            Rectangle()
+//                .fill(Color.clear)
+//                .frame(
+//                    width: 25,
+//                    height: 25
+//                )
         }
     }
     

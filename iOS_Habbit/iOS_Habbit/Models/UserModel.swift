@@ -13,7 +13,7 @@ struct UserModel : Hashable {
     let userName : String
     let selfieVerify : Bool
     let userImage : String
-    let peerReview : [String]
+    let peerReview : [String] // 평판
     let socialMedia : [String:String] // insta, youtube
     let bio : String?
     let careers : [CareerModel]
@@ -37,7 +37,10 @@ extension UserModel {
         selfieVerify: true,
         userImage: "https://img.etnews.com/news/article/2016/06/10/article_10075651203171.png",
         peerReview: [
-            "userUID2"
+            "정신없잉 이쁜 사람입니다",
+            "드라마에서 보던 이미지와 달리 꽤나 적극적이며 활동적으로 갓생에 참여했습니다",
+            "다른 갓생러들과 잘 교류하며 해당 갓생을 보다 활기찬 분위기로 이끌어가는데 일조하여 많은 도움이 되는 멤버였습니다.",
+            "처음들어와 적응하기 힘든 신입 갓생러들을 친절한 태도로 대해주어 신입갓생러들이 해당 갓생에 잘 적응하게 도와주어 굉장히 핵심적인 멤버입니다."
         ],
         socialMedia: [
             "insta" : "geewonii"

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ActivityImageModel : Hashable {
     let imageUID : String
-    let academyUID : String
+    let godLifeUID : String
     let uploadedUserUID : String
-    let image : String
+    let imagePath : String
     let date : String
 }

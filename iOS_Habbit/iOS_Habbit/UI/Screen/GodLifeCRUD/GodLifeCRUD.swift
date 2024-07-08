@@ -24,12 +24,13 @@ struct GodLifeCRUD : View {
     
 
     
-   
+    @State private var dummyUserModel = UserModel.saeKyeongModel
     var body: some View {
         VStack(alignment : HorizontalAlignment.center){
             GodLifeTopView(
                 setVisibleView: $getVisibleView,
                 setGodLifeViewType: getGodLifeViewType,
+                setGodLifeModel: getModel,
                 setHostExitGodLife: {
                     
                 }, 
@@ -49,29 +50,26 @@ struct GodLifeCRUD : View {
                     alignment : HorizontalAlignment.center
                 ) {
                     GodLifeInfoView(setModel: $getModel, setGodLifeViewType: getGodLifeViewType)
-                   
-                    // 호스트
-                    HostView(setUserModel: UserModel.jiwonModel)
                     
-                    // 리뷰 뷰
-//                    if let reviewList = getModel.reviewList {
-//                        ReviewListView(setList: reviewList)
-//                    }
+                    // 호스트
+                    HostView(setUserModel: $dummyUserModel, setGodLifeViewType: getGodLifeViewType)
+                    
+                    // 후기 review list
+                    HostReviewList(setModel: $getModel, setGodLifeViewType: getGodLifeViewType)
+                    
+                    // 좋아요 리스트 like List
+                    // 멤버 리스트 member list
+                    
+                    // QnA qna list
+                    QnAView(setList: getModel.qna, setGodLifeViewType: getGodLifeViewType)
+   
                     
                     // 활동 뷰
-//                    if let activityList = getModel.activityList {
-//                        ActivityListView(setList: activityList)
-//                    }
-                    
-                    // QnA
-//                    if let qnaList = getModel.qna {
-//                        QnAView(setList: qnaList)
-//                    }
+                    ActivityListView(setList: getModel.activityList, setGodLifeViewType: getGodLifeViewType)
                     
                     // 공지사항
-//                    if let notificationList = getModel?.notice {
-//                        NotificationView(notificationList: notificationList)
-//                    }
+                    GodLifeNoticeView(setList: getModel.notice, setGodLifeViewType: getGodLifeViewType)
+
                 }
             }
         }

@@ -21,7 +21,7 @@ struct GodLifeModel : Hashable {
     let adminChecked : Bool
     let activityList : [ActivityModel]
     let members : [MembersModel] 
-    let userRequest : [String]
+    var userRequest : [String]
     let qna : [QnAModel]
     let notice : [GodLifeNotification]
 }
@@ -78,7 +78,7 @@ extension GodLifeModel {
                 ReviewModel(
                     reviewUID: "review-1",
                     user: UserModel(
-                        userUID: "user-1",
+                        userUID: "user-2",
                         userName: "Alice",
                         selfieVerify: true,
                         userImage: "user_image_1",
@@ -130,39 +130,39 @@ extension GodLifeModel {
             adminChecked: true,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -176,12 +176,12 @@ extension GodLifeModel {
                 MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
                 MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
             ],
-            userRequest: ["uid1","uid1","uid1","uid1"],
+            userRequest: ["uid1","uid2","uid3","uid4"],
             qna: [
-                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
-                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
-                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
-                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+                QnAModel(godLifeUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(godLifeUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(godLifeUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(godLifeUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
             ],
             notice: [
                 GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
@@ -269,39 +269,39 @@ extension GodLifeModel {
             adminChecked: false,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -317,8 +317,8 @@ extension GodLifeModel {
             ],
             userRequest: ["uid1"],
             qna: [
-                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
-                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다")
+                QnAModel(godLifeUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(godLifeUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다")
             ],
             notice: [
                 GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.01", writerUID: "uid1"),
@@ -408,39 +408,39 @@ extension GodLifeModel {
             adminChecked: true,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -493,39 +493,39 @@ extension GodLifeModel {
             adminChecked: false,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -537,10 +537,10 @@ extension GodLifeModel {
                 MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원"),
                 MembersModel(godLifeUID: "uid1", memberUID: "uid1", charge: "회원")
             ],
-            userRequest: ["uid1","uid1"],
+            userRequest: ["uid1","uid2"],
             qna: [
-                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
-                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+                QnAModel(godLifeUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(godLifeUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
             ],
             notice: [
                 GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
@@ -579,39 +579,39 @@ extension GodLifeModel {
             adminChecked: true,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -629,10 +629,10 @@ extension GodLifeModel {
             ],
             userRequest: [],
             qna: [
-                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
-                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
-                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
-                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+                QnAModel(godLifeUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(godLifeUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(godLifeUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(godLifeUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
             ],
             notice: [
                 GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.02.02", writerUID: "uid1"),
@@ -674,39 +674,39 @@ extension GodLifeModel {
             adminChecked: false,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -722,10 +722,10 @@ extension GodLifeModel {
             ],
             userRequest: [],
             qna: [
-                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
-                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
-                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
-                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+                QnAModel(godLifeUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(godLifeUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(godLifeUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(godLifeUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
             ],
             notice: [
                 GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.03.02", writerUID: "uid1"),
@@ -765,39 +765,39 @@ extension GodLifeModel {
             adminChecked: false,
             activityList: [
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjM2/MDAxNjQ5NjQ1NTUzMzI5.vpeEEJJTn0NpRNpWrZ7fdioOal5H3wrD44m3pDBU6jMg.hOp84lNnG3L210FOAoobEiuSy-iRT3-rJ44GvPraYeIg.JPEG.choiyou1841/149c69b82bd01a8761a646f6d4ee3676.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
+                            imagePath: "https://postfiles.pstatic.net/MjAyMjA0MTFfMjI5/MDAxNjQ5NjQ1NTQ5MjEy.ZLgb-5EzEzirkYle4tGbnxYiDvu2cF_bFmBfp-nqUbsg.N8noPnxmoShQx9wXRQH-k89StTqxdySSOqElavXh4Ssg.JPEG.choiyou1841/808c131b5a04fad14b36b6350b2c207e.jpg?type=w966",
                             date: "2022.02.02"
                         )
                     ],
                     date: "2022.02.02"
                 ),
                 ActivityModel(
-                    academyUID: "activitymodel-uid",
+                    godLifeUID: "activitymodel-uid",
                     images: [
                         ActivityImageModel(
                             imageUID: "imageuid",
-                            academyUID: "academyuid",
+                            godLifeUID: "academyuid",
                             uploadedUserUID: "useruid",
-                            image: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
+                            imagePath: "https://pbs.twimg.com/media/FGkn0HiVEAMAs-8?format=jpg&name=large",
                             date: "2022.02.02"
                         )
                     ],
@@ -810,10 +810,10 @@ extension GodLifeModel {
             ],
             userRequest: ["uid1","uid1","uid1","uid1"],
             qna: [
-                QnAModel(academyUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
-                QnAModel(academyUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
-                QnAModel(academyUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
-                QnAModel(academyUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
+                QnAModel(godLifeUID: "uid1", question: "달력은 총 얼마인가요?", questionUID: "uid1", answer: "달력굿즈는 개당 천원입니다."),
+                QnAModel(godLifeUID: "uid1", question: "일일권도 판매하나요", questionUID: "uid1", answer: "일일권은 판매하지 않습니다"),
+                QnAModel(godLifeUID: "uid1", question: "회원은 더이상 안받으시나요?", questionUID: "uid1", answer: "회원은 계속 모집중입니다."),
+                QnAModel(godLifeUID: "uid1", question: "커리큘럼이 궁금해요", questionUID: "uid1", answer: "아래 주소로 이동하시면 커리큘럼을 확인하실수잇으십니다.")
             ],
             notice: [
                 GodLifeNotification(godLifeUID: "uid1", notificationUID: "uid1", title: "금일 특정회원 제제안내", notice: "금일 특정회원의 성추문으로인한 제제를 하였습니다.", date: "2022.04.02", writerUID: "uid1"),

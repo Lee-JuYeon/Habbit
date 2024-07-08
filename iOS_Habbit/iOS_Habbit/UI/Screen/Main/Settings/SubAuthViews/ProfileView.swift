@@ -37,14 +37,8 @@ struct ProfileView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                             
-                            SocialView(
-                                setID: setUserModel.socialMedia["insta"],
-                                setSocialType: .INSTA
-                            )
-                            SocialView(
-                                setID: setUserModel.socialMedia["youtube"],
-                                setSocialType: .YOUTUBE
-                            )
+                            HostSocialView(setUserModel: setUserModel, setGodLifeViewType: .Read)
+
                         }
                         
                         Text("🏃🏻 경력")

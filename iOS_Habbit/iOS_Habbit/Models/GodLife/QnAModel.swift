@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QnAModel : Hashable {
-    let academyUID : String
+    let godLifeUID : String
     let question : String
     let questionUID : String
     let answer : String

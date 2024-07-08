@@ -24,16 +24,23 @@ struct GodLifeCell : View {
     
     @EnvironmentObject private var screenVM : ScreenVM
     
-    private func monthlyPayConverter(pay : Double?) -> String {
-        return switch(pay){
-        case 0.0 :
-            "무료"
-        case nil :
-            "무료"
-        default :
-            String(format: "%.0f", pay ?? "무료") + "원"
+    private func monthlyPayConverter(pay: Double?) -> String {
+      let formatter = NumberFormatter()
+      formatter.numberStyle = .currency // Use currency number style
+      formatter.locale = Locale(identifier: "ko_KR")
+
+      if let pay = pay {
+        if pay == 0.0 {
+          return "무료"
+        } else if let formattedPay = formatter.string(from: NSNumber(value: pay)) {
+          // Remove the leading currency symbol (원) and add a trailing "원"
+          let trimmedAndAppendedPay = formattedPay.replacingOccurrences(of: "₩", with: "") + "원"
+          return trimmedAndAppendedPay
         }
+      }
+      return "무료"
     }
+
     
     enum CellType {
         case Main

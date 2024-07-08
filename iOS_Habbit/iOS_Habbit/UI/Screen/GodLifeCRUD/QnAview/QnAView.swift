@@ -9,22 +9,51 @@ import SwiftUI
 
 struct QnAView: View {
     
-    let setList : [QnAModel]
+    private var getList : [QnAModel]
+    private var getGodLifeType : GodLifeViewType
+    init(
+        setList : [QnAModel],
+        setGodLifeViewType : GodLifeViewType
+    ){
+        self.getList = setList
+        self.getGodLifeType = setGodLifeViewType
+    }
     
+    private var myAuthUID = "uid1"
+    private func mList() -> [QnAModel]{
+        return getList.sorted { model1, model2 in
+            if model1.questionUID == myAuthUID {
+                true
+            }else if model2.questionUID == myAuthUID {
+                false
+            }
+            return false
+        }
+    }
+
+    @State private var questionText = ""
     var body: some View {
         VStack(alignment : HorizontalAlignment.leading){
-            Text("질의응답")
-                .font(.system(size: 30))
-                .fontWeight(.bold)
+            HStack(alignment: VerticalAlignment.center, spacing: 2){
+                Text("질의응답")
+                    .font(.system(size: 30, weight: .bold))
+                
+                if getGodLifeType == .Joined {
+                    QnAQuestionButton(setGodLifeViewType: getGodLifeType)
+                }
+            }
+           
             
-            ScrollView(.vertical, showsIndicators: false){
-                LazyVStack(alignment : HorizontalAlignment.leading){
-                    ForEach(setList, id: \.self){ model in
-                        // 리뷰 리스트 아이탬
-                        item(model: model)
-                    }// ForEach
-                }// LazyHStack
-            }//Scrollview
+            HStack(alignment: VerticalAlignment.center, spacing: 0){
+                ScrollView(.vertical, showsIndicators: false){
+                    LazyVStack(alignment : HorizontalAlignment.leading){
+                        ForEach(mList(), id: \.self){ model in
+                            // 리뷰 리스트 아이탬
+                            QnAItem(setModel: model, setType: getGodLifeType)
+                        }// ForEach
+                    }// LazyHStack
+                }//Scrollview
+            }
             .frame(
                 height: 200
             )
@@ -32,24 +61,7 @@ struct QnAView: View {
         .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0))
     }
     
-    
-    private func item(model : QnAModel) -> some View {
-        /*
-         let academyUID : String
-         let question : String
-         let questionUID : String
-         let answer : String
-         */
-        return VStack(alignment : HorizontalAlignment.leading){
-            Text(model.question)
-                .font(.system(size: 20))
-                .fontWeight(.bold)
-            
-            Text("💁🏻 \(model.answer)")
-                .font(.system(size: 20))
-            
-        }
-        .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-    }
 }
+
+
 

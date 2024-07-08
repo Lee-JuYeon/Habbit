@@ -8,7 +8,8 @@
 import SwiftUI
 
 
-struct CareerModel : Hashable {
+struct CareerModel : Identifiable, Hashable {
+    let id = UUID()
     var title : String
     var career : String
 }

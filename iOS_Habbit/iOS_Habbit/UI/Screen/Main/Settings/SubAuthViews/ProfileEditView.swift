@@ -35,14 +35,14 @@ struct ProfileEditView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                             
-                            SocialView(
-                                setID: setUserModel.socialMedia["insta"],
-                                setSocialType: .INSTA
-                            )
-                            SocialView(
-                                setID: setUserModel.socialMedia["youtube"],
-                                setSocialType: .YOUTUBE
-                            )
+//                            HostSocialView(
+//                                setID: setUserModel.socialMedia["insta"],
+//                                setSocialType: .INSTA
+//                            )
+//                            HostSocialView(
+//                                setID: setUserModel.socialMedia["youtube"],
+//                                setSocialType: .YOUTUBE
+//                            )
                         }
                         
                         Text("👣 경력")
